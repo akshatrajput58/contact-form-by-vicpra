@@ -1,0 +1,2937 @@
+/* ###########################################################################
+##############################################################################
+######################## copyright vicpra.com 2021-2023 ######################
+##############################################################################
+########################################################################### */
+@font-face {
+  font-family: "vicon";
+  src: url('../font/vicon.eot?t=1680339538483'); /* IE9*/
+  src: url('../font/vicon.eot?t=1680339538483#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url("../font/vicon.woff2?t=1680339538483") format("woff2"),
+  url("../font/vicon.woff?t=1680339538483") format("woff"),
+  url('../font/vicon.ttf?t=1680339538483') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../font/vicon.svg?t=1680339538483#vicon') format('svg'); /* iOS 4.1- */
+  font-display: swap;
+}
+
+.vicon {
+  font-family: 'vicon' !important;
+  font-style: normal;
+    font-variant-caps: normal;
+    -webkit-font-variant-ligatures: normal;
+            font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    text-rendering: auto;
+    line-height: inherit;
+    display: inline-block;
+    text-transform: none;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.vicon-ul
+  {
+      margin-left: 2em;
+      padding-left: 0;
+  
+      list-style: none;
+  }
+  .vicon-ul > li
+  {
+      position: relative;
+  }
+  .vicon-ul .vicon
+  {
+      font-size: inherit;
+      line-height: inherit;
+  
+      position: absolute;
+      left: -2em;
+  
+      width: 2em;
+  
+      text-align: center;
+  }
+  @-webkit-keyframes spin
+  {
+      0%
+      {
+          -webkit-transform: rotate(0);
+                  transform: rotate(0);
+      }
+      100%
+      {
+          -webkit-transform: rotate(359deg);
+                  transform: rotate(359deg);
+      }
+  }
+  @keyframes spin
+  {
+      0%
+      {
+          -webkit-transform: rotate(0);
+                  transform: rotate(0);
+      }
+      100%
+      {
+          -webkit-transform: rotate(359deg);
+                  transform: rotate(359deg);
+      }
+  }
+  @-webkit-keyframes burst
+  {
+      0%
+      {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+  
+          opacity: 1;
+      }
+      90%
+      {
+          -webkit-transform: scale(1.5);
+                  transform: scale(1.5);
+  
+          opacity: 0;
+      }
+  }
+  @keyframes burst
+  {
+      0%
+      {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+  
+          opacity: 1;
+      }
+      90%
+      {
+          -webkit-transform: scale(1.5);
+                  transform: scale(1.5);
+  
+          opacity: 0;
+      }
+  }
+  @-webkit-keyframes flashing
+  {
+      0%
+      {
+          opacity: 1;
+      }
+      45%
+      {
+          opacity: 0;
+      }
+      90%
+      {
+          opacity: 1;
+      }
+  }
+  @keyframes flashing
+  {
+      0%
+      {
+          opacity: 1;
+      }
+      45%
+      {
+          opacity: 0;
+      }
+      90%
+      {
+          opacity: 1;
+      }
+  }
+  @-webkit-keyframes fade-left
+  {
+      0%
+      {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+  
+          opacity: 1;
+      }
+      75%
+      {
+          -webkit-transform: translateX(-20px);
+                  transform: translateX(-20px);
+  
+          opacity: 0;
+      }
+  }
+  @keyframes fade-left
+  {
+      0%
+      {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+  
+          opacity: 1;
+      }
+      75%
+      {
+          -webkit-transform: translateX(-20px);
+                  transform: translateX(-20px);
+  
+          opacity: 0;
+      }
+  }
+  @-webkit-keyframes fade-right
+  {
+      0%
+      {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+  
+          opacity: 1;
+      }
+      75%
+      {
+          -webkit-transform: translateX(20px);
+                  transform: translateX(20px);
+  
+          opacity: 0;
+      }
+  }
+  @keyframes fade-right
+  {
+      0%
+      {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+  
+          opacity: 1;
+      }
+      75%
+      {
+          -webkit-transform: translateX(20px);
+                  transform: translateX(20px);
+  
+          opacity: 0;
+      }
+  }
+  @-webkit-keyframes fade-up
+  {
+      0%
+      {
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+  
+          opacity: 1;
+      }
+      75%
+      {
+          -webkit-transform: translateY(-20px);
+                  transform: translateY(-20px);
+  
+          opacity: 0;
+      }
+  }
+  @keyframes fade-up
+  {
+      0%
+      {
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+  
+          opacity: 1;
+      }
+      75%
+      {
+          -webkit-transform: translateY(-20px);
+                  transform: translateY(-20px);
+  
+          opacity: 0;
+      }
+  }
+  @-webkit-keyframes fade-down
+  {
+      0%
+      {
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+  
+          opacity: 1;
+      }
+      75%
+      {
+          -webkit-transform: translateY(20px);
+                  transform: translateY(20px);
+  
+          opacity: 0;
+      }
+  }
+  @keyframes fade-down
+  {
+      0%
+      {
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+  
+          opacity: 1;
+      }
+      75%
+      {
+          -webkit-transform: translateY(20px);
+                  transform: translateY(20px);
+  
+          opacity: 0;
+      }
+  }
+  @-webkit-keyframes tada
+  {
+      from
+      {
+          -webkit-transform: scale3d(1, 1, 1);
+                  transform: scale3d(1, 1, 1);
+      }
+  
+      10%,
+      20%
+      {
+          -webkit-transform: scale3d(.95, .95, .95) rotate3d(0, 0, 1, -10deg);
+                  transform: scale3d(.95, .95, .95) rotate3d(0, 0, 1, -10deg);
+      }
+  
+      30%,
+      50%,
+      70%,
+      90%
+      {
+          -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg);
+                  transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg);
+      }
+  
+      40%,
+      60%,
+      80%
+      {
+          -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, -10deg);
+                  transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, -10deg);
+      }
+  
+      to
+      {
+          -webkit-transform: scale3d(1, 1, 1);
+                  transform: scale3d(1, 1, 1);
+      }
+  }
+  
+  @keyframes tada
+  {
+      from
+      {
+          -webkit-transform: scale3d(1, 1, 1);
+                  transform: scale3d(1, 1, 1);
+      }
+  
+      10%,
+      20%
+      {
+          -webkit-transform: scale3d(.95, .95, .95) rotate3d(0, 0, 1, -10deg);
+                  transform: scale3d(.95, .95, .95) rotate3d(0, 0, 1, -10deg);
+      }
+  
+      30%,
+      50%,
+      70%,
+      90%
+      {
+          -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg);
+                  transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg);
+      }
+  
+      40%,
+      60%,
+      80%
+      {
+          -webkit-transform: rotate3d(0, 0, 1, -10deg);
+                  transform: rotate3d(0, 0, 1, -10deg);
+      }
+  
+      to
+      {
+          -webkit-transform: scale3d(1, 1, 1);
+                  transform: scale3d(1, 1, 1);
+      }
+  }
+  .vicon-spin
+  {
+      -webkit-animation: spin 2s linear infinite;
+              animation: spin 2s linear infinite;
+  }
+  .vicon-spin-hover:hover
+  {
+      -webkit-animation: spin 2s linear infinite;
+              animation: spin 2s linear infinite;
+  }
+  
+  .vicon-tada
+  {
+      -webkit-animation: tada 1.5s ease infinite;
+              animation: tada 1.5s ease infinite;
+  }
+  .vicon-tada-hover:hover
+  {
+      -webkit-animation: tada 1.5s ease infinite;
+              animation: tada 1.5s ease infinite;
+  }
+  
+  .vicon-flashing
+  {
+      -webkit-animation: flashing 1.5s infinite linear;
+              animation: flashing 1.5s infinite linear;
+  }
+  .vicon-flashing-hover:hover
+  {
+      -webkit-animation: flashing 1.5s infinite linear;
+              animation: flashing 1.5s infinite linear;
+  }
+  
+  .vicon-burst
+  {
+      -webkit-animation: burst 1.5s infinite linear;
+              animation: burst 1.5s infinite linear;
+  }
+  .vicon-burst-hover:hover
+  {
+      -webkit-animation: burst 1.5s infinite linear;
+              animation: burst 1.5s infinite linear;
+  }
+  .vicon-fade-up
+  {
+      -webkit-animation: fade-up 1.5s infinite linear;
+              animation: fade-up 1.5s infinite linear;
+  }
+  .vicon-fade-up-hover:hover
+  {
+      -webkit-animation: fade-up 1.5s infinite linear;
+              animation: fade-up 1.5s infinite linear;
+  }
+  .vicon-fade-down
+  {
+      -webkit-animation: fade-down 1.5s infinite linear;
+              animation: fade-down 1.5s infinite linear;
+  }
+  .vicon-fade-down-hover:hover
+  {
+      -webkit-animation: fade-down 1.5s infinite linear;
+              animation: fade-down 1.5s infinite linear;
+  }
+  .vicon-fade-left
+  {
+      -webkit-animation: fade-left 1.5s infinite linear;
+              animation: fade-left 1.5s infinite linear;
+  }
+  .vicon-fade-left-hover:hover
+  {
+      -webkit-animation: fade-left 1.5s infinite linear;
+              animation: fade-left 1.5s infinite linear;
+  }
+  .vicon-fade-right
+  {
+      -webkit-animation: fade-right 1.5s infinite linear;
+              animation: fade-right 1.5s infinite linear;
+  }
+  .vicon-fade-right-hover:hover
+  {
+      -webkit-animation: fade-right 1.5s infinite linear;
+              animation: fade-right 1.5s infinite linear;
+  }
+  .vicon-pull-left
+  {
+      float: left;
+      margin-right: .3em!important;
+  }
+  .vicon-pull-right
+  {
+      float: right;
+      margin-left: .3em!important;
+  }
+  .vicon-rotate-90
+  {
+      transform: rotate(90deg);
+      -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=1)';
+  }
+  .vicon-rotate-180
+  {
+      transform: rotate(180deg);
+      -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=2)';
+  }
+  .vicon-rotate-270
+  {
+      transform: rotate(270deg);
+      -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=3)';
+  }
+  .vicon-flip-horizontal
+  {
+      transform: scaleX(-1);
+      -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)';
+  }
+  .vicon-flip-vertical
+  {
+      transform: scaleY(-1);
+      -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)';
+  }
+  .vicon-border
+  {
+      padding: .25em;
+      border: .07em solid rgba(0,0,0,.1);
+      border-radius: .25em;
+  }
+  .vicon-border-circle
+  {
+      padding: .25em;
+      border: .07em solid rgba(0,0,0,.1);
+      border-radius: 50%;
+  }
+
+.vicon-lg { font-size: 1.3333em; line-height: 0.75em; vertical-align: -.0667em; }
+.vicon-xl { font-size: 1.5em; line-height: 0.6666em; vertical-align: -.075em; }
+.vicon-xxs { font-size: .5em; }
+.vicon-xs { font-size: .75em; }
+.vicon-sm { font-size: .875em }
+.vicon-1x { font-size: 1em; }
+.vicon-2x { font-size: 2em; }
+.vicon-3x { font-size: 3em; }
+.vicon-4x { font-size: 4em; }
+.vicon-5x { font-size: 5em; }
+.vicon-6x { font-size: 6em; }
+.vicon-7x { font-size: 7em; }
+.vicon-8x { font-size: 8em; }
+.vicon-9x { font-size: 9em; }
+.vicon-10x { font-size: 10em; }
+.vicon-fw { text-align: center; width: 1.25em; }
+
+.vicon-24-hours-fill:before { content: "\ea01"; }
+.vicon-24-hours-line:before { content: "\ea02"; }
+.vicon-4k-fill:before { content: "\ea03"; }
+.vicon-4k-line:before { content: "\ea04"; }
+.vicon-a-b:before { content: "\ea05"; }
+.vicon-account-box-fill:before { content: "\ea06"; }
+.vicon-account-box-line:before { content: "\ea07"; }
+.vicon-account-circle-fill:before { content: "\ea08"; }
+.vicon-account-circle-line:before { content: "\ea09"; }
+.vicon-account-pin-box-fill:before { content: "\ea0a"; }
+.vicon-account-pin-box-line:before { content: "\ea0b"; }
+.vicon-account-pin-circle-fill:before { content: "\ea0c"; }
+.vicon-account-pin-circle-line:before { content: "\ea0d"; }
+.vicon-add-box-fill:before { content: "\ea0e"; }
+.vicon-add-box-line:before { content: "\ea0f"; }
+.vicon-add-circle-fill:before { content: "\ea10"; }
+.vicon-add-circle-line:before { content: "\ea11"; }
+.vicon-add-fill:before { content: "\ea12"; }
+.vicon-add-line:before { content: "\ea13"; }
+.vicon-admin-fill:before { content: "\ea14"; }
+.vicon-admin-line:before { content: "\ea15"; }
+.vicon-advertisement-fill:before { content: "\ea16"; }
+.vicon-advertisement-line:before { content: "\ea17"; }
+.vicon-airplay-fill:before { content: "\ea18"; }
+.vicon-airplay-line:before { content: "\ea19"; }
+.vicon-alarm-fill:before { content: "\ea1a"; }
+.vicon-alarm-line:before { content: "\ea1b"; }
+.vicon-alarm-warning-fill:before { content: "\ea1c"; }
+.vicon-alarm-warning-line:before { content: "\ea1d"; }
+.vicon-album-fill:before { content: "\ea1e"; }
+.vicon-album-line:before { content: "\ea1f"; }
+.vicon-alert-fill:before { content: "\ea20"; }
+.vicon-alert-line:before { content: "\ea21"; }
+.vicon-aliens-fill:before { content: "\ea22"; }
+.vicon-aliens-line:before { content: "\ea23"; }
+.vicon-align-bottom:before { content: "\ea24"; }
+.vicon-align-center:before { content: "\ea25"; }
+.vicon-align-justify:before { content: "\ea26"; }
+.vicon-align-left:before { content: "\ea27"; }
+.vicon-align-right:before { content: "\ea28"; }
+.vicon-align-top:before { content: "\ea29"; }
+.vicon-align-vertically:before { content: "\ea2a"; }
+.vicon-alipay-fill:before { content: "\ea2b"; }
+.vicon-alipay-line:before { content: "\ea2c"; }
+.vicon-amazon-fill:before { content: "\ea2d"; }
+.vicon-amazon-line:before { content: "\ea2e"; }
+.vicon-anchor-fill:before { content: "\ea2f"; }
+.vicon-anchor-line:before { content: "\ea30"; }
+.vicon-ancient-gate-fill:before { content: "\ea31"; }
+.vicon-ancient-gate-line:before { content: "\ea32"; }
+.vicon-ancient-pavilion-fill:before { content: "\ea33"; }
+.vicon-ancient-pavilion-line:before { content: "\ea34"; }
+.vicon-android-fill:before { content: "\ea35"; }
+.vicon-android-line:before { content: "\ea36"; }
+.vicon-angularjs-fill:before { content: "\ea37"; }
+.vicon-angularjs-line:before { content: "\ea38"; }
+.vicon-anticlockwise-2-fill:before { content: "\ea39"; }
+.vicon-anticlockwise-2-line:before { content: "\ea3a"; }
+.vicon-anticlockwise-fill:before { content: "\ea3b"; }
+.vicon-anticlockwise-line:before { content: "\ea3c"; }
+.vicon-app-store-fill:before { content: "\ea3d"; }
+.vicon-app-store-line:before { content: "\ea3e"; }
+.vicon-apple-fill:before { content: "\ea3f"; }
+.vicon-apple-line:before { content: "\ea40"; }
+.vicon-apps-2-fill:before { content: "\ea41"; }
+.vicon-apps-2-line:before { content: "\ea42"; }
+.vicon-apps-fill:before { content: "\ea43"; }
+.vicon-apps-line:before { content: "\ea44"; }
+.vicon-archive-drawer-fill:before { content: "\ea45"; }
+.vicon-archive-drawer-line:before { content: "\ea46"; }
+.vicon-archive-fill:before { content: "\ea47"; }
+.vicon-archive-line:before { content: "\ea48"; }
+.vicon-arrow-down-circle-fill:before { content: "\ea49"; }
+.vicon-arrow-down-circle-line:before { content: "\ea4a"; }
+.vicon-arrow-down-fill:before { content: "\ea4b"; }
+.vicon-arrow-down-line:before { content: "\ea4c"; }
+.vicon-arrow-down-s-fill:before { content: "\ea4d"; }
+.vicon-arrow-down-s-line:before { content: "\ea4e"; }
+.vicon-arrow-drop-down-fill:before { content: "\ea4f"; }
+.vicon-arrow-drop-down-line:before { content: "\ea50"; }
+.vicon-arrow-drop-left-fill:before { content: "\ea51"; }
+.vicon-arrow-drop-left-line:before { content: "\ea52"; }
+.vicon-arrow-drop-right-fill:before { content: "\ea53"; }
+.vicon-arrow-drop-right-line:before { content: "\ea54"; }
+.vicon-arrow-drop-up-fill:before { content: "\ea55"; }
+.vicon-arrow-drop-up-line:before { content: "\ea56"; }
+.vicon-arrow-go-back-fill:before { content: "\ea57"; }
+.vicon-arrow-go-back-line:before { content: "\ea58"; }
+.vicon-arrow-go-forward-fill:before { content: "\ea59"; }
+.vicon-arrow-go-forward-line:before { content: "\ea5a"; }
+.vicon-arrow-left-circle-fill:before { content: "\ea5b"; }
+.vicon-arrow-left-circle-line:before { content: "\ea5c"; }
+.vicon-arrow-left-down-fill:before { content: "\ea5d"; }
+.vicon-arrow-left-down-line:before { content: "\ea5e"; }
+.vicon-arrow-left-fill:before { content: "\ea5f"; }
+.vicon-arrow-left-line:before { content: "\ea60"; }
+.vicon-arrow-left-right-fill:before { content: "\ea61"; }
+.vicon-arrow-left-right-line:before { content: "\ea62"; }
+.vicon-arrow-left-s-fill:before { content: "\ea63"; }
+.vicon-arrow-left-s-line:before { content: "\ea64"; }
+.vicon-arrow-left-up-fill:before { content: "\ea65"; }
+.vicon-arrow-left-up-line:before { content: "\ea66"; }
+.vicon-arrow-right-circle-fill:before { content: "\ea67"; }
+.vicon-arrow-right-circle-line:before { content: "\ea68"; }
+.vicon-arrow-right-down-fill:before { content: "\ea69"; }
+.vicon-arrow-right-down-line:before { content: "\ea6a"; }
+.vicon-arrow-right-fill:before { content: "\ea6b"; }
+.vicon-arrow-right-line:before { content: "\ea6c"; }
+.vicon-arrow-right-s-fill:before { content: "\ea6d"; }
+.vicon-arrow-right-s-line:before { content: "\ea6e"; }
+.vicon-arrow-right-up-fill:before { content: "\ea6f"; }
+.vicon-arrow-right-up-line:before { content: "\ea70"; }
+.vicon-arrow-up-circle-fill:before { content: "\ea71"; }
+.vicon-arrow-up-circle-line:before { content: "\ea72"; }
+.vicon-arrow-up-down-fill:before { content: "\ea73"; }
+.vicon-arrow-up-down-line:before { content: "\ea74"; }
+.vicon-arrow-up-fill:before { content: "\ea75"; }
+.vicon-arrow-up-line:before { content: "\ea76"; }
+.vicon-arrow-up-s-fill:before { content: "\ea77"; }
+.vicon-arrow-up-s-line:before { content: "\ea78"; }
+.vicon-artboard-2-fill:before { content: "\ea79"; }
+.vicon-artboard-2-line:before { content: "\ea7a"; }
+.vicon-artboard-fill:before { content: "\ea7b"; }
+.vicon-artboard-line:before { content: "\ea7c"; }
+.vicon-article-fill:before { content: "\ea7d"; }
+.vicon-article-line:before { content: "\ea7e"; }
+.vicon-aspect-ratio-fill:before { content: "\ea7f"; }
+.vicon-aspect-ratio-line:before { content: "\ea80"; }
+.vicon-asterisk:before { content: "\ea81"; }
+.vicon-at-fill:before { content: "\ea82"; }
+.vicon-at-line:before { content: "\ea83"; }
+.vicon-attachment-2:before { content: "\ea84"; }
+.vicon-attachment-fill:before { content: "\ea85"; }
+.vicon-attachment-line:before { content: "\ea86"; }
+.vicon-auction-fill:before { content: "\ea87"; }
+.vicon-auction-line:before { content: "\ea88"; }
+.vicon-award-fill:before { content: "\ea89"; }
+.vicon-award-line:before { content: "\ea8a"; }
+.vicon-baidu-fill:before { content: "\ea8b"; }
+.vicon-baidu-line:before { content: "\ea8c"; }
+.vicon-ball-pen-fill:before { content: "\ea8d"; }
+.vicon-ball-pen-line:before { content: "\ea8e"; }
+.vicon-bank-card-2-fill:before { content: "\ea8f"; }
+.vicon-bank-card-2-line:before { content: "\ea90"; }
+.vicon-bank-card-fill:before { content: "\ea91"; }
+.vicon-bank-card-line:before { content: "\ea92"; }
+.vicon-bank-fill:before { content: "\ea93"; }
+.vicon-bank-line:before { content: "\ea94"; }
+.vicon-bar-chart-2-fill:before { content: "\ea95"; }
+.vicon-bar-chart-2-line:before { content: "\ea96"; }
+.vicon-bar-chart-box-fill:before { content: "\ea97"; }
+.vicon-bar-chart-box-line:before { content: "\ea98"; }
+.vicon-bar-chart-fill:before { content: "\ea99"; }
+.vicon-bar-chart-grouped-fill:before { content: "\ea9a"; }
+.vicon-bar-chart-grouped-line:before { content: "\ea9b"; }
+.vicon-bar-chart-horizontal-fill:before { content: "\ea9c"; }
+.vicon-bar-chart-horizontal-line:before { content: "\ea9d"; }
+.vicon-bar-chart-line:before { content: "\ea9e"; }
+.vicon-barcode-box-fill:before { content: "\ea9f"; }
+.vicon-barcode-box-line:before { content: "\eaa0"; }
+.vicon-barcode-fill:before { content: "\eaa1"; }
+.vicon-barcode-line:before { content: "\eaa2"; }
+.vicon-barricade-fill:before { content: "\eaa3"; }
+.vicon-barricade-line:before { content: "\eaa4"; }
+.vicon-base-station-fill:before { content: "\eaa5"; }
+.vicon-base-station-line:before { content: "\eaa6"; }
+.vicon-basketball-fill:before { content: "\eaa7"; }
+.vicon-basketball-line:before { content: "\eaa8"; }
+.vicon-battery-2-charge-fill:before { content: "\eaa9"; }
+.vicon-battery-2-charge-line:before { content: "\eaaa"; }
+.vicon-battery-2-fill:before { content: "\eaab"; }
+.vicon-battery-2-line:before { content: "\eaac"; }
+.vicon-battery-charge-fill:before { content: "\eaad"; }
+.vicon-battery-charge-line:before { content: "\eaae"; }
+.vicon-battery-fill:before { content: "\eaaf"; }
+.vicon-battery-line:before { content: "\eab0"; }
+.vicon-battery-low-fill:before { content: "\eab1"; }
+.vicon-battery-low-line:before { content: "\eab2"; }
+.vicon-battery-saver-fill:before { content: "\eab3"; }
+.vicon-battery-saver-line:before { content: "\eab4"; }
+.vicon-battery-share-fill:before { content: "\eab5"; }
+.vicon-battery-share-line:before { content: "\eab6"; }
+.vicon-bear-smile-fill:before { content: "\eab7"; }
+.vicon-bear-smile-line:before { content: "\eab8"; }
+.vicon-behance-fill:before { content: "\eab9"; }
+.vicon-behance-line:before { content: "\eaba"; }
+.vicon-bell-fill:before { content: "\eabb"; }
+.vicon-bell-line:before { content: "\eabc"; }
+.vicon-bike-fill:before { content: "\eabd"; }
+.vicon-bike-line:before { content: "\eabe"; }
+.vicon-bilibili-fill:before { content: "\eabf"; }
+.vicon-bilibili-line:before { content: "\eac0"; }
+.vicon-bill-fill:before { content: "\eac1"; }
+.vicon-bill-line:before { content: "\eac2"; }
+.vicon-billiards-fill:before { content: "\eac3"; }
+.vicon-billiards-line:before { content: "\eac4"; }
+.vicon-bit-coin-fill:before { content: "\eac5"; }
+.vicon-bit-coin-line:before { content: "\eac6"; }
+.vicon-blaze-fill:before { content: "\eac7"; }
+.vicon-blaze-line:before { content: "\eac8"; }
+.vicon-bluetooth-connect-fill:before { content: "\eac9"; }
+.vicon-bluetooth-connect-line:before { content: "\eaca"; }
+.vicon-bluetooth-fill:before { content: "\eacb"; }
+.vicon-bluetooth-line:before { content: "\eacc"; }
+.vicon-blur-off-fill:before { content: "\eacd"; }
+.vicon-blur-off-line:before { content: "\eace"; }
+.vicon-body-scan-fill:before { content: "\eacf"; }
+.vicon-body-scan-line:before { content: "\ead0"; }
+.vicon-bold:before { content: "\ead1"; }
+.vicon-book-2-fill:before { content: "\ead2"; }
+.vicon-book-2-line:before { content: "\ead3"; }
+.vicon-book-3-fill:before { content: "\ead4"; }
+.vicon-book-3-line:before { content: "\ead5"; }
+.vicon-book-fill:before { content: "\ead6"; }
+.vicon-book-line:before { content: "\ead7"; }
+.vicon-book-mark-fill:before { content: "\ead8"; }
+.vicon-book-mark-line:before { content: "\ead9"; }
+.vicon-book-open-fill:before { content: "\eada"; }
+.vicon-book-open-line:before { content: "\eadb"; }
+.vicon-book-read-fill:before { content: "\eadc"; }
+.vicon-book-read-line:before { content: "\eadd"; }
+.vicon-booklet-fill:before { content: "\eade"; }
+.vicon-booklet-line:before { content: "\eadf"; }
+.vicon-bookmark-2-fill:before { content: "\eae0"; }
+.vicon-bookmark-2-line:before { content: "\eae1"; }
+.vicon-bookmark-3-fill:before { content: "\eae2"; }
+.vicon-bookmark-3-line:before { content: "\eae3"; }
+.vicon-bookmark-fill:before { content: "\eae4"; }
+.vicon-bookmark-line:before { content: "\eae5"; }
+.vicon-boxing-fill:before { content: "\eae6"; }
+.vicon-boxing-line:before { content: "\eae7"; }
+.vicon-braces-fill:before { content: "\eae8"; }
+.vicon-braces-line:before { content: "\eae9"; }
+.vicon-brackets-fill:before { content: "\eaea"; }
+.vicon-brackets-line:before { content: "\eaeb"; }
+.vicon-briefcase-2-fill:before { content: "\eaec"; }
+.vicon-briefcase-2-line:before { content: "\eaed"; }
+.vicon-briefcase-3-fill:before { content: "\eaee"; }
+.vicon-briefcase-3-line:before { content: "\eaef"; }
+.vicon-briefcase-4-fill:before { content: "\eaf0"; }
+.vicon-briefcase-4-line:before { content: "\eaf1"; }
+.vicon-briefcase-5-fill:before { content: "\eaf2"; }
+.vicon-briefcase-5-line:before { content: "\eaf3"; }
+.vicon-briefcase-fill:before { content: "\eaf4"; }
+.vicon-briefcase-line:before { content: "\eaf5"; }
+.vicon-bring-forward:before { content: "\eaf6"; }
+.vicon-bring-to-front:before { content: "\eaf7"; }
+.vicon-broadcast-fill:before { content: "\eaf8"; }
+.vicon-broadcast-line:before { content: "\eaf9"; }
+.vicon-brush-2-fill:before { content: "\eafa"; }
+.vicon-brush-2-line:before { content: "\eafb"; }
+.vicon-brush-3-fill:before { content: "\eafc"; }
+.vicon-brush-3-line:before { content: "\eafd"; }
+.vicon-brush-4-fill:before { content: "\eafe"; }
+.vicon-brush-4-line:before { content: "\eaff"; }
+.vicon-brush-fill:before { content: "\eb00"; }
+.vicon-brush-line:before { content: "\eb01"; }
+.vicon-bubble-chart-fill:before { content: "\eb02"; }
+.vicon-bubble-chart-line:before { content: "\eb03"; }
+.vicon-bug-2-fill:before { content: "\eb04"; }
+.vicon-bug-2-line:before { content: "\eb05"; }
+.vicon-bug-fill:before { content: "\eb06"; }
+.vicon-bug-line:before { content: "\eb07"; }
+.vicon-building-2-fill:before { content: "\eb08"; }
+.vicon-building-2-line:before { content: "\eb09"; }
+.vicon-building-3-fill:before { content: "\eb0a"; }
+.vicon-building-3-line:before { content: "\eb0b"; }
+.vicon-building-4-fill:before { content: "\eb0c"; }
+.vicon-building-4-line:before { content: "\eb0d"; }
+.vicon-building-fill:before { content: "\eb0e"; }
+.vicon-building-line:before { content: "\eb0f"; }
+.vicon-bus-2-fill:before { content: "\eb10"; }
+.vicon-bus-2-line:before { content: "\eb11"; }
+.vicon-bus-fill:before { content: "\eb12"; }
+.vicon-bus-line:before { content: "\eb13"; }
+.vicon-bus-wifi-fill:before { content: "\eb14"; }
+.vicon-bus-wifi-line:before { content: "\eb15"; }
+.vicon-cactus-fill:before { content: "\eb16"; }
+.vicon-cactus-line:before { content: "\eb17"; }
+.vicon-cake-2-fill:before { content: "\eb18"; }
+.vicon-cake-2-line:before { content: "\eb19"; }
+.vicon-cake-3-fill:before { content: "\eb1a"; }
+.vicon-cake-3-line:before { content: "\eb1b"; }
+.vicon-cake-fill:before { content: "\eb1c"; }
+.vicon-cake-line:before { content: "\eb1d"; }
+.vicon-calculator-fill:before { content: "\eb1e"; }
+.vicon-calculator-line:before { content: "\eb1f"; }
+.vicon-calendar-2-fill:before { content: "\eb20"; }
+.vicon-calendar-2-line:before { content: "\eb21"; }
+.vicon-calendar-check-fill:before { content: "\eb22"; }
+.vicon-calendar-check-line:before { content: "\eb23"; }
+.vicon-calendar-event-fill:before { content: "\eb24"; }
+.vicon-calendar-event-line:before { content: "\eb25"; }
+.vicon-calendar-fill:before { content: "\eb26"; }
+.vicon-calendar-line:before { content: "\eb27"; }
+.vicon-calendar-todo-fill:before { content: "\eb28"; }
+.vicon-calendar-todo-line:before { content: "\eb29"; }
+.vicon-camera-2-fill:before { content: "\eb2a"; }
+.vicon-camera-2-line:before { content: "\eb2b"; }
+.vicon-camera-3-fill:before { content: "\eb2c"; }
+.vicon-camera-3-line:before { content: "\eb2d"; }
+.vicon-camera-fill:before { content: "\eb2e"; }
+.vicon-camera-lens-fill:before { content: "\eb2f"; }
+.vicon-camera-lens-line:before { content: "\eb30"; }
+.vicon-camera-line:before { content: "\eb31"; }
+.vicon-camera-off-fill:before { content: "\eb32"; }
+.vicon-camera-off-line:before { content: "\eb33"; }
+.vicon-camera-switch-fill:before { content: "\eb34"; }
+.vicon-camera-switch-line:before { content: "\eb35"; }
+.vicon-capsule-fill:before { content: "\eb36"; }
+.vicon-capsule-line:before { content: "\eb37"; }
+.vicon-car-fill:before { content: "\eb38"; }
+.vicon-car-line:before { content: "\eb39"; }
+.vicon-car-washing-fill:before { content: "\eb3a"; }
+.vicon-car-washing-line:before { content: "\eb3b"; }
+.vicon-caravan-fill:before { content: "\eb3c"; }
+.vicon-caravan-line:before { content: "\eb3d"; }
+.vicon-cast-fill:before { content: "\eb3e"; }
+.vicon-cast-line:before { content: "\eb3f"; }
+.vicon-cellphone-fill:before { content: "\eb40"; }
+.vicon-cellphone-line:before { content: "\eb41"; }
+.vicon-celsius-fill:before { content: "\eb42"; }
+.vicon-celsius-line:before { content: "\eb43"; }
+.vicon-centos-fill:before { content: "\eb44"; }
+.vicon-centos-line:before { content: "\eb45"; }
+.vicon-character-recognition-fill:before { content: "\eb46"; }
+.vicon-character-recognition-line:before { content: "\eb47"; }
+.vicon-charging-pile-2-fill:before { content: "\eb48"; }
+.vicon-charging-pile-2-line:before { content: "\eb49"; }
+.vicon-charging-pile-fill:before { content: "\eb4a"; }
+.vicon-charging-pile-line:before { content: "\eb4b"; }
+.vicon-chat-1-fill:before { content: "\eb4c"; }
+.vicon-chat-1-line:before { content: "\eb4d"; }
+.vicon-chat-2-fill:before { content: "\eb4e"; }
+.vicon-chat-2-line:before { content: "\eb4f"; }
+.vicon-chat-3-fill:before { content: "\eb50"; }
+.vicon-chat-3-line:before { content: "\eb51"; }
+.vicon-chat-4-fill:before { content: "\eb52"; }
+.vicon-chat-4-line:before { content: "\eb53"; }
+.vicon-chat-check-fill:before { content: "\eb54"; }
+.vicon-chat-check-line:before { content: "\eb55"; }
+.vicon-chat-delete-fill:before { content: "\eb56"; }
+.vicon-chat-delete-line:before { content: "\eb57"; }
+.vicon-chat-download-fill:before { content: "\eb58"; }
+.vicon-chat-download-line:before { content: "\eb59"; }
+.vicon-chat-follow-up-fill:before { content: "\eb5a"; }
+.vicon-chat-follow-up-line:before { content: "\eb5b"; }
+.vicon-chat-forward-fill:before { content: "\eb5c"; }
+.vicon-chat-forward-line:before { content: "\eb5d"; }
+.vicon-chat-heart-fill:before { content: "\eb5e"; }
+.vicon-chat-heart-line:before { content: "\eb5f"; }
+.vicon-chat-history-fill:before { content: "\eb60"; }
+.vicon-chat-history-line:before { content: "\eb61"; }
+.vicon-chat-new-fill:before { content: "\eb62"; }
+.vicon-chat-new-line:before { content: "\eb63"; }
+.vicon-chat-off-fill:before { content: "\eb64"; }
+.vicon-chat-off-line:before { content: "\eb65"; }
+.vicon-chat-poll-fill:before { content: "\eb66"; }
+.vicon-chat-poll-line:before { content: "\eb67"; }
+.vicon-chat-private-fill:before { content: "\eb68"; }
+.vicon-chat-private-line:before { content: "\eb69"; }
+.vicon-chat-quote-fill:before { content: "\eb6a"; }
+.vicon-chat-quote-line:before { content: "\eb6b"; }
+.vicon-chat-settings-fill:before { content: "\eb6c"; }
+.vicon-chat-settings-line:before { content: "\eb6d"; }
+.vicon-chat-smile-2-fill:before { content: "\eb6e"; }
+.vicon-chat-smile-2-line:before { content: "\eb6f"; }
+.vicon-chat-smile-3-fill:before { content: "\eb70"; }
+.vicon-chat-smile-3-line:before { content: "\eb71"; }
+.vicon-chat-smile-fill:before { content: "\eb72"; }
+.vicon-chat-smile-line:before { content: "\eb73"; }
+.vicon-chat-upload-fill:before { content: "\eb74"; }
+.vicon-chat-upload-line:before { content: "\eb75"; }
+.vicon-chat-voice-fill:before { content: "\eb76"; }
+.vicon-chat-voice-line:before { content: "\eb77"; }
+.vicon-check-double-fill:before { content: "\eb78"; }
+.vicon-check-double-line:before { content: "\eb79"; }
+.vicon-check-fill:before { content: "\eb7a"; }
+.vicon-check-line:before { content: "\eb7b"; }
+.vicon-checkbox-blank-circle-fill:before { content: "\eb7c"; }
+.vicon-checkbox-blank-circle-line:before { content: "\eb7d"; }
+.vicon-checkbox-blank-fill:before { content: "\eb7e"; }
+.vicon-checkbox-blank-line:before { content: "\eb7f"; }
+.vicon-checkbox-circle-fill:before { content: "\eb80"; }
+.vicon-checkbox-circle-line:before { content: "\eb81"; }
+.vicon-checkbox-fill:before { content: "\eb82"; }
+.vicon-checkbox-indeterminate-fill:before { content: "\eb83"; }
+.vicon-checkbox-indeterminate-line:before { content: "\eb84"; }
+.vicon-checkbox-line:before { content: "\eb85"; }
+.vicon-checkbox-multiple-blank-fill:before { content: "\eb86"; }
+.vicon-checkbox-multiple-blank-line:before { content: "\eb87"; }
+.vicon-checkbox-multiple-fill:before { content: "\eb88"; }
+.vicon-checkbox-multiple-line:before { content: "\eb89"; }
+.vicon-china-railway-fill:before { content: "\eb8a"; }
+.vicon-china-railway-line:before { content: "\eb8b"; }
+.vicon-chrome-fill:before { content: "\eb8c"; }
+.vicon-chrome-line:before { content: "\eb8d"; }
+.vicon-clapperboard-fill:before { content: "\eb8e"; }
+.vicon-clapperboard-line:before { content: "\eb8f"; }
+.vicon-clipboard-fill:before { content: "\eb90"; }
+.vicon-clipboard-line:before { content: "\eb91"; }
+.vicon-clockwise-2-fill:before { content: "\eb92"; }
+.vicon-clockwise-2-line:before { content: "\eb93"; }
+.vicon-clockwise-fill:before { content: "\eb94"; }
+.vicon-clockwise-line:before { content: "\eb95"; }
+.vicon-close-circle-fill:before { content: "\eb96"; }
+.vicon-close-circle-line:before { content: "\eb97"; }
+.vicon-close-fill:before { content: "\eb98"; }
+.vicon-close-line:before { content: "\eb99"; }
+.vicon-closed-captioning-fill:before { content: "\eb9a"; }
+.vicon-closed-captioning-line:before { content: "\eb9b"; }
+.vicon-cloud-fill:before { content: "\eb9c"; }
+.vicon-cloud-line:before { content: "\eb9d"; }
+.vicon-cloud-off-fill:before { content: "\eb9e"; }
+.vicon-cloud-off-line:before { content: "\eb9f"; }
+.vicon-cloud-windy-fill:before { content: "\eba0"; }
+.vicon-cloud-windy-line:before { content: "\eba1"; }
+.vicon-cloudy-2-fill:before { content: "\eba2"; }
+.vicon-cloudy-2-line:before { content: "\eba3"; }
+.vicon-cloudy-fill:before { content: "\eba4"; }
+.vicon-cloudy-line:before { content: "\eba5"; }
+.vicon-code-box-fill:before { content: "\eba6"; }
+.vicon-code-box-line:before { content: "\eba7"; }
+.vicon-code-fill:before { content: "\eba8"; }
+.vicon-code-line:before { content: "\eba9"; }
+.vicon-code-s-fill:before { content: "\ebaa"; }
+.vicon-code-s-line:before { content: "\ebab"; }
+.vicon-code-s-slash-fill:before { content: "\ebac"; }
+.vicon-code-s-slash-line:before { content: "\ebad"; }
+.vicon-code-view:before { content: "\ebae"; }
+.vicon-codepen-fill:before { content: "\ebaf"; }
+.vicon-codepen-line:before { content: "\ebb0"; }
+.vicon-coin-fill:before { content: "\ebb1"; }
+.vicon-coin-line:before { content: "\ebb2"; }
+.vicon-coins-fill:before { content: "\ebb3"; }
+.vicon-coins-line:before { content: "\ebb4"; }
+.vicon-collage-fill:before { content: "\ebb5"; }
+.vicon-collage-line:before { content: "\ebb6"; }
+.vicon-command-fill:before { content: "\ebb7"; }
+.vicon-command-line:before { content: "\ebb8"; }
+.vicon-community-fill:before { content: "\ebb9"; }
+.vicon-community-line:before { content: "\ebba"; }
+.vicon-compass-2-fill:before { content: "\ebbb"; }
+.vicon-compass-2-line:before { content: "\ebbc"; }
+.vicon-compass-3-fill:before { content: "\ebbd"; }
+.vicon-compass-3-line:before { content: "\ebbe"; }
+.vicon-compass-4-fill:before { content: "\ebbf"; }
+.vicon-compass-4-line:before { content: "\ebc0"; }
+.vicon-compass-discover-fill:before { content: "\ebc1"; }
+.vicon-compass-discover-line:before { content: "\ebc2"; }
+.vicon-compass-fill:before { content: "\ebc3"; }
+.vicon-compass-line:before { content: "\ebc4"; }
+.vicon-compasses-2-fill:before { content: "\ebc5"; }
+.vicon-compasses-2-line:before { content: "\ebc6"; }
+.vicon-compasses-fill:before { content: "\ebc7"; }
+.vicon-compasses-line:before { content: "\ebc8"; }
+.vicon-computer-fill:before { content: "\ebc9"; }
+.vicon-computer-line:before { content: "\ebca"; }
+.vicon-contacts-book-2-fill:before { content: "\ebcb"; }
+.vicon-contacts-book-2-line:before { content: "\ebcc"; }
+.vicon-contacts-book-fill:before { content: "\ebcd"; }
+.vicon-contacts-book-line:before { content: "\ebce"; }
+.vicon-contacts-book-upload-fill:before { content: "\ebcf"; }
+.vicon-contacts-book-upload-line:before { content: "\ebd0"; }
+.vicon-contacts-fill:before { content: "\ebd1"; }
+.vicon-contacts-line:before { content: "\ebd2"; }
+.vicon-contrast-2-fill:before { content: "\ebd3"; }
+.vicon-contrast-2-line:before { content: "\ebd4"; }
+.vicon-contrast-drop-2-fill:before { content: "\ebd5"; }
+.vicon-contrast-drop-2-line:before { content: "\ebd6"; }
+.vicon-contrast-drop-fill:before { content: "\ebd7"; }
+.vicon-contrast-drop-line:before { content: "\ebd8"; }
+.vicon-contrast-fill:before { content: "\ebd9"; }
+.vicon-contrast-line:before { content: "\ebda"; }
+.vicon-copper-coin-fill:before { content: "\ebdb"; }
+.vicon-copper-coin-line:before { content: "\ebdc"; }
+.vicon-copper-diamond-fill:before { content: "\ebdd"; }
+.vicon-copper-diamond-line:before { content: "\ebde"; }
+.vicon-copyleft-fill:before { content: "\ebdf"; }
+.vicon-copyleft-line:before { content: "\ebe0"; }
+.vicon-copyright-fill:before { content: "\ebe1"; }
+.vicon-copyright-line:before { content: "\ebe2"; }
+.vicon-coreos-fill:before { content: "\ebe3"; }
+.vicon-coreos-line:before { content: "\ebe4"; }
+.vicon-coupon-2-fill:before { content: "\ebe5"; }
+.vicon-coupon-2-line:before { content: "\ebe6"; }
+.vicon-coupon-3-fill:before { content: "\ebe7"; }
+.vicon-coupon-3-line:before { content: "\ebe8"; }
+.vicon-coupon-4-fill:before { content: "\ebe9"; }
+.vicon-coupon-4-line:before { content: "\ebea"; }
+.vicon-coupon-5-fill:before { content: "\ebeb"; }
+.vicon-coupon-5-line:before { content: "\ebec"; }
+.vicon-coupon-fill:before { content: "\ebed"; }
+.vicon-coupon-line:before { content: "\ebee"; }
+.vicon-cpu-fill:before { content: "\ebef"; }
+.vicon-cpu-line:before { content: "\ebf0"; }
+.vicon-creative-commons-by-fill:before { content: "\ebf1"; }
+.vicon-creative-commons-by-line:before { content: "\ebf2"; }
+.vicon-creative-commons-fill:before { content: "\ebf3"; }
+.vicon-creative-commons-line:before { content: "\ebf4"; }
+.vicon-creative-commons-nc-fill:before { content: "\ebf5"; }
+.vicon-creative-commons-nc-line:before { content: "\ebf6"; }
+.vicon-creative-commons-nd-fill:before { content: "\ebf7"; }
+.vicon-creative-commons-nd-line:before { content: "\ebf8"; }
+.vicon-creative-commons-sa-fill:before { content: "\ebf9"; }
+.vicon-creative-commons-sa-line:before { content: "\ebfa"; }
+.vicon-creative-commons-zero-fill:before { content: "\ebfb"; }
+.vicon-creative-commons-zero-line:before { content: "\ebfc"; }
+.vicon-criminal-fill:before { content: "\ebfd"; }
+.vicon-criminal-line:before { content: "\ebfe"; }
+.vicon-crop-2-fill:before { content: "\ebff"; }
+.vicon-crop-2-line:before { content: "\ec00"; }
+.vicon-crop-fill:before { content: "\ec01"; }
+.vicon-crop-line:before { content: "\ec02"; }
+.vicon-css3-fill:before { content: "\ec03"; }
+.vicon-css3-line:before { content: "\ec04"; }
+.vicon-cup-fill:before { content: "\ec05"; }
+.vicon-cup-line:before { content: "\ec06"; }
+.vicon-currency-fill:before { content: "\ec07"; }
+.vicon-currency-line:before { content: "\ec08"; }
+.vicon-cursor-fill:before { content: "\ec09"; }
+.vicon-cursor-line:before { content: "\ec0a"; }
+.vicon-customer-service-2-fill:before { content: "\ec0b"; }
+.vicon-customer-service-2-line:before { content: "\ec0c"; }
+.vicon-customer-service-fill:before { content: "\ec0d"; }
+.vicon-customer-service-line:before { content: "\ec0e"; }
+.vicon-dashboard-2-fill:before { content: "\ec0f"; }
+.vicon-dashboard-2-line:before { content: "\ec10"; }
+.vicon-dashboard-3-fill:before { content: "\ec11"; }
+.vicon-dashboard-3-line:before { content: "\ec12"; }
+.vicon-dashboard-fill:before { content: "\ec13"; }
+.vicon-dashboard-line:before { content: "\ec14"; }
+.vicon-database-2-fill:before { content: "\ec15"; }
+.vicon-database-2-line:before { content: "\ec16"; }
+.vicon-database-fill:before { content: "\ec17"; }
+.vicon-database-line:before { content: "\ec18"; }
+.vicon-delete-back-2-fill:before { content: "\ec19"; }
+.vicon-delete-back-2-line:before { content: "\ec1a"; }
+.vicon-delete-back-fill:before { content: "\ec1b"; }
+.vicon-delete-back-line:before { content: "\ec1c"; }
+.vicon-delete-bin-2-fill:before { content: "\ec1d"; }
+.vicon-delete-bin-2-line:before { content: "\ec1e"; }
+.vicon-delete-bin-3-fill:before { content: "\ec1f"; }
+.vicon-delete-bin-3-line:before { content: "\ec20"; }
+.vicon-delete-bin-4-fill:before { content: "\ec21"; }
+.vicon-delete-bin-4-line:before { content: "\ec22"; }
+.vicon-delete-bin-5-fill:before { content: "\ec23"; }
+.vicon-delete-bin-5-line:before { content: "\ec24"; }
+.vicon-delete-bin-6-fill:before { content: "\ec25"; }
+.vicon-delete-bin-6-line:before { content: "\ec26"; }
+.vicon-delete-bin-7-fill:before { content: "\ec27"; }
+.vicon-delete-bin-7-line:before { content: "\ec28"; }
+.vicon-delete-bin-fill:before { content: "\ec29"; }
+.vicon-delete-bin-line:before { content: "\ec2a"; }
+.vicon-delete-column:before { content: "\ec2b"; }
+.vicon-delete-row:before { content: "\ec2c"; }
+.vicon-device-fill:before { content: "\ec2d"; }
+.vicon-device-line:before { content: "\ec2e"; }
+.vicon-device-recover-fill:before { content: "\ec2f"; }
+.vicon-device-recover-line:before { content: "\ec30"; }
+.vicon-dingding-fill:before { content: "\ec31"; }
+.vicon-dingding-line:before { content: "\ec32"; }
+.vicon-direction-fill:before { content: "\ec33"; }
+.vicon-direction-line:before { content: "\ec34"; }
+.vicon-disc-fill:before { content: "\ec35"; }
+.vicon-disc-line:before { content: "\ec36"; }
+.vicon-discord-fill:before { content: "\ec37"; }
+.vicon-discord-line:before { content: "\ec38"; }
+.vicon-discuss-fill:before { content: "\ec39"; }
+.vicon-discuss-line:before { content: "\ec3a"; }
+.vicon-dislike-fill:before { content: "\ec3b"; }
+.vicon-dislike-line:before { content: "\ec3c"; }
+.vicon-disqus-fill:before { content: "\ec3d"; }
+.vicon-disqus-line:before { content: "\ec3e"; }
+.vicon-divide-fill:before { content: "\ec3f"; }
+.vicon-divide-line:before { content: "\ec40"; }
+.vicon-donut-chart-fill:before { content: "\ec41"; }
+.vicon-donut-chart-line:before { content: "\ec42"; }
+.vicon-door-closed-fill:before { content: "\ec43"; }
+.vicon-door-closed-line:before { content: "\ec44"; }
+.vicon-door-fill:before { content: "\ec45"; }
+.vicon-door-line:before { content: "\ec46"; }
+.vicon-door-lock-box-fill:before { content: "\ec47"; }
+.vicon-door-lock-box-line:before { content: "\ec48"; }
+.vicon-door-lock-fill:before { content: "\ec49"; }
+.vicon-door-lock-line:before { content: "\ec4a"; }
+.vicon-door-open-fill:before { content: "\ec4b"; }
+.vicon-door-open-line:before { content: "\ec4c"; }
+.vicon-dossier-fill:before { content: "\ec4d"; }
+.vicon-dossier-line:before { content: "\ec4e"; }
+.vicon-douban-fill:before { content: "\ec4f"; }
+.vicon-douban-line:before { content: "\ec50"; }
+.vicon-double-quotes-l:before { content: "\ec51"; }
+.vicon-double-quotes-r:before { content: "\ec52"; }
+.vicon-download-2-fill:before { content: "\ec53"; }
+.vicon-download-2-line:before { content: "\ec54"; }
+.vicon-download-cloud-2-fill:before { content: "\ec55"; }
+.vicon-download-cloud-2-line:before { content: "\ec56"; }
+.vicon-download-cloud-fill:before { content: "\ec57"; }
+.vicon-download-cloud-line:before { content: "\ec58"; }
+.vicon-download-fill:before { content: "\ec59"; }
+.vicon-download-line:before { content: "\ec5a"; }
+.vicon-draft-fill:before { content: "\ec5b"; }
+.vicon-draft-line:before { content: "\ec5c"; }
+.vicon-drag-drop-fill:before { content: "\ec5d"; }
+.vicon-drag-drop-line:before { content: "\ec5e"; }
+.vicon-drag-move-2-fill:before { content: "\ec5f"; }
+.vicon-drag-move-2-line:before { content: "\ec60"; }
+.vicon-drag-move-fill:before { content: "\ec61"; }
+.vicon-drag-move-line:before { content: "\ec62"; }
+.vicon-dribbble-fill:before { content: "\ec63"; }
+.vicon-dribbble-line:before { content: "\ec64"; }
+.vicon-drive-fill:before { content: "\ec65"; }
+.vicon-drive-line:before { content: "\ec66"; }
+.vicon-drizzle-fill:before { content: "\ec67"; }
+.vicon-drizzle-line:before { content: "\ec68"; }
+.vicon-drop-fill:before { content: "\ec69"; }
+.vicon-drop-line:before { content: "\ec6a"; }
+.vicon-dropbox-fill:before { content: "\ec6b"; }
+.vicon-dropbox-line:before { content: "\ec6c"; }
+.vicon-dual-sim-1-fill:before { content: "\ec6d"; }
+.vicon-dual-sim-1-line:before { content: "\ec6e"; }
+.vicon-dual-sim-2-fill:before { content: "\ec6f"; }
+.vicon-dual-sim-2-line:before { content: "\ec70"; }
+.vicon-dv-fill:before { content: "\ec71"; }
+.vicon-dv-line:before { content: "\ec72"; }
+.vicon-dvd-fill:before { content: "\ec73"; }
+.vicon-dvd-line:before { content: "\ec74"; }
+.vicon-e-bike-2-fill:before { content: "\ec75"; }
+.vicon-e-bike-2-line:before { content: "\ec76"; }
+.vicon-e-bike-fill:before { content: "\ec77"; }
+.vicon-e-bike-line:before { content: "\ec78"; }
+.vicon-earth-fill:before { content: "\ec79"; }
+.vicon-earth-line:before { content: "\ec7a"; }
+.vicon-earthquake-fill:before { content: "\ec7b"; }
+.vicon-earthquake-line:before { content: "\ec7c"; }
+.vicon-edge-fill:before { content: "\ec7d"; }
+.vicon-edge-line:before { content: "\ec7e"; }
+.vicon-edit-2-fill:before { content: "\ec7f"; }
+.vicon-edit-2-line:before { content: "\ec80"; }
+.vicon-edit-box-fill:before { content: "\ec81"; }
+.vicon-edit-box-line:before { content: "\ec82"; }
+.vicon-edit-circle-fill:before { content: "\ec83"; }
+.vicon-edit-circle-line:before { content: "\ec84"; }
+.vicon-edit-fill:before { content: "\ec85"; }
+.vicon-edit-line:before { content: "\ec86"; }
+.vicon-eject-fill:before { content: "\ec87"; }
+.vicon-eject-line:before { content: "\ec88"; }
+.vicon-emotion-2-fill:before { content: "\ec89"; }
+.vicon-emotion-2-line:before { content: "\ec8a"; }
+.vicon-emotion-fill:before { content: "\ec8b"; }
+.vicon-emotion-happy-fill:before { content: "\ec8c"; }
+.vicon-emotion-happy-line:before { content: "\ec8d"; }
+.vicon-emotion-laugh-fill:before { content: "\ec8e"; }
+.vicon-emotion-laugh-line:before { content: "\ec8f"; }
+.vicon-emotion-line:before { content: "\ec90"; }
+.vicon-emotion-normal-fill:before { content: "\ec91"; }
+.vicon-emotion-normal-line:before { content: "\ec92"; }
+.vicon-emotion-sad-fill:before { content: "\ec93"; }
+.vicon-emotion-sad-line:before { content: "\ec94"; }
+.vicon-emotion-unhappy-fill:before { content: "\ec95"; }
+.vicon-emotion-unhappy-line:before { content: "\ec96"; }
+.vicon-empathize-fill:before { content: "\ec97"; }
+.vicon-empathize-line:before { content: "\ec98"; }
+.vicon-emphasis-cn:before { content: "\ec99"; }
+.vicon-emphasis:before { content: "\ec9a"; }
+.vicon-english-input:before { content: "\ec9b"; }
+.vicon-equalizer-fill:before { content: "\ec9c"; }
+.vicon-equalizer-line:before { content: "\ec9d"; }
+.vicon-eraser-fill:before { content: "\ec9e"; }
+.vicon-eraser-line:before { content: "\ec9f"; }
+.vicon-error-warning-fill:before { content: "\eca0"; }
+.vicon-error-warning-line:before { content: "\eca1"; }
+.vicon-evernote-fill:before { content: "\eca2"; }
+.vicon-evernote-line:before { content: "\eca3"; }
+.vicon-exchange-box-fill:before { content: "\eca4"; }
+.vicon-exchange-box-line:before { content: "\eca5"; }
+.vicon-exchange-cny-fill:before { content: "\eca6"; }
+.vicon-exchange-cny-line:before { content: "\eca7"; }
+.vicon-exchange-dollar-fill:before { content: "\eca8"; }
+.vicon-exchange-dollar-line:before { content: "\eca9"; }
+.vicon-exchange-fill:before { content: "\ecaa"; }
+.vicon-exchange-funds-fill:before { content: "\ecab"; }
+.vicon-exchange-funds-line:before { content: "\ecac"; }
+.vicon-exchange-line:before { content: "\ecad"; }
+.vicon-external-link-fill:before { content: "\ecae"; }
+.vicon-external-link-line:before { content: "\ecaf"; }
+.vicon-eye-2-fill:before { content: "\ecb0"; }
+.vicon-eye-2-line:before { content: "\ecb1"; }
+.vicon-eye-close-fill:before { content: "\ecb2"; }
+.vicon-eye-close-line:before { content: "\ecb3"; }
+.vicon-eye-fill:before { content: "\ecb4"; }
+.vicon-eye-line:before { content: "\ecb5"; }
+.vicon-eye-off-fill:before { content: "\ecb6"; }
+.vicon-eye-off-line:before { content: "\ecb7"; }
+.vicon-facebook-box-fill:before { content: "\ecb8"; }
+.vicon-facebook-box-line:before { content: "\ecb9"; }
+.vicon-facebook-circle-fill:before { content: "\ecba"; }
+.vicon-facebook-circle-line:before { content: "\ecbb"; }
+.vicon-facebook-fill:before { content: "\ecbc"; }
+.vicon-facebook-line:before { content: "\ecbd"; }
+.vicon-fahrenheit-fill:before { content: "\ecbe"; }
+.vicon-fahrenheit-line:before { content: "\ecbf"; }
+.vicon-feedback-fill:before { content: "\ecc0"; }
+.vicon-feedback-line:before { content: "\ecc1"; }
+.vicon-file-2-fill:before { content: "\ecc2"; }
+.vicon-file-2-line:before { content: "\ecc3"; }
+.vicon-file-3-fill:before { content: "\ecc4"; }
+.vicon-file-3-line:before { content: "\ecc5"; }
+.vicon-file-4-fill:before { content: "\ecc6"; }
+.vicon-file-4-line:before { content: "\ecc7"; }
+.vicon-file-add-fill:before { content: "\ecc8"; }
+.vicon-file-add-line:before { content: "\ecc9"; }
+.vicon-file-chart-2-fill:before { content: "\ecca"; }
+.vicon-file-chart-2-line:before { content: "\eccb"; }
+.vicon-file-chart-fill:before { content: "\eccc"; }
+.vicon-file-chart-line:before { content: "\eccd"; }
+.vicon-file-cloud-fill:before { content: "\ecce"; }
+.vicon-file-cloud-line:before { content: "\eccf"; }
+.vicon-file-code-fill:before { content: "\ecd0"; }
+.vicon-file-code-line:before { content: "\ecd1"; }
+.vicon-file-copy-2-fill:before { content: "\ecd2"; }
+.vicon-file-copy-2-line:before { content: "\ecd3"; }
+.vicon-file-copy-fill:before { content: "\ecd4"; }
+.vicon-file-copy-line:before { content: "\ecd5"; }
+.vicon-file-damage-fill:before { content: "\ecd6"; }
+.vicon-file-damage-line:before { content: "\ecd7"; }
+.vicon-file-download-fill:before { content: "\ecd8"; }
+.vicon-file-download-line:before { content: "\ecd9"; }
+.vicon-file-edit-fill:before { content: "\ecda"; }
+.vicon-file-edit-line:before { content: "\ecdb"; }
+.vicon-file-excel-2-fill:before { content: "\ecdc"; }
+.vicon-file-excel-2-line:before { content: "\ecdd"; }
+.vicon-file-excel-fill:before { content: "\ecde"; }
+.vicon-file-excel-line:before { content: "\ecdf"; }
+.vicon-file-fill:before { content: "\ece0"; }
+.vicon-file-forbid-fill:before { content: "\ece1"; }
+.vicon-file-forbid-line:before { content: "\ece2"; }
+.vicon-file-gif-fill:before { content: "\ece3"; }
+.vicon-file-gif-line:before { content: "\ece4"; }
+.vicon-file-history-fill:before { content: "\ece5"; }
+.vicon-file-history-line:before { content: "\ece6"; }
+.vicon-file-hwp-fill:before { content: "\ece7"; }
+.vicon-file-hwp-line:before { content: "\ece8"; }
+.vicon-file-info-fill:before { content: "\ece9"; }
+.vicon-file-info-line:before { content: "\ecea"; }
+.vicon-file-line:before { content: "\eceb"; }
+.vicon-file-list-2-fill:before { content: "\ecec"; }
+.vicon-file-list-2-line:before { content: "\eced"; }
+.vicon-file-list-3-fill:before { content: "\ecee"; }
+.vicon-file-list-3-line:before { content: "\ecef"; }
+.vicon-file-list-fill:before { content: "\ecf0"; }
+.vicon-file-list-line:before { content: "\ecf1"; }
+.vicon-file-lock-fill:before { content: "\ecf2"; }
+.vicon-file-lock-line:before { content: "\ecf3"; }
+.vicon-file-mark-fill:before { content: "\ecf4"; }
+.vicon-file-mark-line:before { content: "\ecf5"; }
+.vicon-file-music-fill:before { content: "\ecf6"; }
+.vicon-file-music-line:before { content: "\ecf7"; }
+.vicon-file-paper-2-fill:before { content: "\ecf8"; }
+.vicon-file-paper-2-line:before { content: "\ecf9"; }
+.vicon-file-paper-fill:before { content: "\ecfa"; }
+.vicon-file-paper-line:before { content: "\ecfb"; }
+.vicon-file-pdf-fill:before { content: "\ecfc"; }
+.vicon-file-pdf-line:before { content: "\ecfd"; }
+.vicon-file-ppt-2-fill:before { content: "\ecfe"; }
+.vicon-file-ppt-2-line:before { content: "\ecff"; }
+.vicon-file-ppt-fill:before { content: "\ed00"; }
+.vicon-file-ppt-line:before { content: "\ed01"; }
+.vicon-file-reduce-fill:before { content: "\ed02"; }
+.vicon-file-reduce-line:before { content: "\ed03"; }
+.vicon-file-search-fill:before { content: "\ed04"; }
+.vicon-file-search-line:before { content: "\ed05"; }
+.vicon-file-settings-fill:before { content: "\ed06"; }
+.vicon-file-settings-line:before { content: "\ed07"; }
+.vicon-file-shield-2-fill:before { content: "\ed08"; }
+.vicon-file-shield-2-line:before { content: "\ed09"; }
+.vicon-file-shield-fill:before { content: "\ed0a"; }
+.vicon-file-shield-line:before { content: "\ed0b"; }
+.vicon-file-shred-fill:before { content: "\ed0c"; }
+.vicon-file-shred-line:before { content: "\ed0d"; }
+.vicon-file-text-fill:before { content: "\ed0e"; }
+.vicon-file-text-line:before { content: "\ed0f"; }
+.vicon-file-transfer-fill:before { content: "\ed10"; }
+.vicon-file-transfer-line:before { content: "\ed11"; }
+.vicon-file-unknow-fill:before { content: "\ed12"; }
+.vicon-file-unknow-line:before { content: "\ed13"; }
+.vicon-file-upload-fill:before { content: "\ed14"; }
+.vicon-file-upload-line:before { content: "\ed15"; }
+.vicon-file-user-fill:before { content: "\ed16"; }
+.vicon-file-user-line:before { content: "\ed17"; }
+.vicon-file-warning-fill:before { content: "\ed18"; }
+.vicon-file-warning-line:before { content: "\ed19"; }
+.vicon-file-word-2-fill:before { content: "\ed1a"; }
+.vicon-file-word-2-line:before { content: "\ed1b"; }
+.vicon-file-word-fill:before { content: "\ed1c"; }
+.vicon-file-word-line:before { content: "\ed1d"; }
+.vicon-file-zip-fill:before { content: "\ed1e"; }
+.vicon-file-zip-line:before { content: "\ed1f"; }
+.vicon-film-fill:before { content: "\ed20"; }
+.vicon-film-line:before { content: "\ed21"; }
+.vicon-filter-2-fill:before { content: "\ed22"; }
+.vicon-filter-2-line:before { content: "\ed23"; }
+.vicon-filter-3-fill:before { content: "\ed24"; }
+.vicon-filter-3-line:before { content: "\ed25"; }
+.vicon-filter-fill:before { content: "\ed26"; }
+.vicon-filter-line:before { content: "\ed27"; }
+.vicon-filter-off-fill:before { content: "\ed28"; }
+.vicon-filter-off-line:before { content: "\ed29"; }
+.vicon-find-replace-fill:before { content: "\ed2a"; }
+.vicon-find-replace-line:before { content: "\ed2b"; }
+.vicon-finder-fill:before { content: "\ed2c"; }
+.vicon-finder-line:before { content: "\ed2d"; }
+.vicon-fingerprint-2-fill:before { content: "\ed2e"; }
+.vicon-fingerprint-2-line:before { content: "\ed2f"; }
+.vicon-fingerprint-fill:before { content: "\ed30"; }
+.vicon-fingerprint-line:before { content: "\ed31"; }
+.vicon-fire-fill:before { content: "\ed32"; }
+.vicon-fire-line:before { content: "\ed33"; }
+.vicon-firefox-fill:before { content: "\ed34"; }
+.vicon-firefox-line:before { content: "\ed35"; }
+.vicon-first-aid-kit-fill:before { content: "\ed36"; }
+.vicon-first-aid-kit-line:before { content: "\ed37"; }
+.vicon-flag-2-fill:before { content: "\ed38"; }
+.vicon-flag-2-line:before { content: "\ed39"; }
+.vicon-flag-fill:before { content: "\ed3a"; }
+.vicon-flag-line:before { content: "\ed3b"; }
+.vicon-flashlight-fill:before { content: "\ed3c"; }
+.vicon-flashlight-line:before { content: "\ed3d"; }
+.vicon-flask-fill:before { content: "\ed3e"; }
+.vicon-flask-line:before { content: "\ed3f"; }
+.vicon-flight-land-fill:before { content: "\ed40"; }
+.vicon-flight-land-line:before { content: "\ed41"; }
+.vicon-flight-takeoff-fill:before { content: "\ed42"; }
+.vicon-flight-takeoff-line:before { content: "\ed43"; }
+.vicon-flood-fill:before { content: "\ed44"; }
+.vicon-flood-line:before { content: "\ed45"; }
+.vicon-flow-chart:before { content: "\ed46"; }
+.vicon-flutter-fill:before { content: "\ed47"; }
+.vicon-flutter-line:before { content: "\ed48"; }
+.vicon-focus-2-fill:before { content: "\ed49"; }
+.vicon-focus-2-line:before { content: "\ed4a"; }
+.vicon-focus-3-fill:before { content: "\ed4b"; }
+.vicon-focus-3-line:before { content: "\ed4c"; }
+.vicon-focus-fill:before { content: "\ed4d"; }
+.vicon-focus-line:before { content: "\ed4e"; }
+.vicon-foggy-fill:before { content: "\ed4f"; }
+.vicon-foggy-line:before { content: "\ed50"; }
+.vicon-folder-2-fill:before { content: "\ed51"; }
+.vicon-folder-2-line:before { content: "\ed52"; }
+.vicon-folder-3-fill:before { content: "\ed53"; }
+.vicon-folder-3-line:before { content: "\ed54"; }
+.vicon-folder-4-fill:before { content: "\ed55"; }
+.vicon-folder-4-line:before { content: "\ed56"; }
+.vicon-folder-5-fill:before { content: "\ed57"; }
+.vicon-folder-5-line:before { content: "\ed58"; }
+.vicon-folder-add-fill:before { content: "\ed59"; }
+.vicon-folder-add-line:before { content: "\ed5a"; }
+.vicon-folder-chart-2-fill:before { content: "\ed5b"; }
+.vicon-folder-chart-2-line:before { content: "\ed5c"; }
+.vicon-folder-chart-fill:before { content: "\ed5d"; }
+.vicon-folder-chart-line:before { content: "\ed5e"; }
+.vicon-folder-download-fill:before { content: "\ed5f"; }
+.vicon-folder-download-line:before { content: "\ed60"; }
+.vicon-folder-fill:before { content: "\ed61"; }
+.vicon-folder-forbid-fill:before { content: "\ed62"; }
+.vicon-folder-forbid-line:before { content: "\ed63"; }
+.vicon-folder-history-fill:before { content: "\ed64"; }
+.vicon-folder-history-line:before { content: "\ed65"; }
+.vicon-folder-info-fill:before { content: "\ed66"; }
+.vicon-folder-info-line:before { content: "\ed67"; }
+.vicon-folder-keyhole-fill:before { content: "\ed68"; }
+.vicon-folder-keyhole-line:before { content: "\ed69"; }
+.vicon-folder-line:before { content: "\ed6a"; }
+.vicon-folder-lock-fill:before { content: "\ed6b"; }
+.vicon-folder-lock-line:before { content: "\ed6c"; }
+.vicon-folder-music-fill:before { content: "\ed6d"; }
+.vicon-folder-music-line:before { content: "\ed6e"; }
+.vicon-folder-open-fill:before { content: "\ed6f"; }
+.vicon-folder-open-line:before { content: "\ed70"; }
+.vicon-folder-received-fill:before { content: "\ed71"; }
+.vicon-folder-received-line:before { content: "\ed72"; }
+.vicon-folder-reduce-fill:before { content: "\ed73"; }
+.vicon-folder-reduce-line:before { content: "\ed74"; }
+.vicon-folder-settings-fill:before { content: "\ed75"; }
+.vicon-folder-settings-line:before { content: "\ed76"; }
+.vicon-folder-shared-fill:before { content: "\ed77"; }
+.vicon-folder-shared-line:before { content: "\ed78"; }
+.vicon-folder-shield-2-fill:before { content: "\ed79"; }
+.vicon-folder-shield-2-line:before { content: "\ed7a"; }
+.vicon-folder-shield-fill:before { content: "\ed7b"; }
+.vicon-folder-shield-line:before { content: "\ed7c"; }
+.vicon-folder-transfer-fill:before { content: "\ed7d"; }
+.vicon-folder-transfer-line:before { content: "\ed7e"; }
+.vicon-folder-unknow-fill:before { content: "\ed7f"; }
+.vicon-folder-unknow-line:before { content: "\ed80"; }
+.vicon-folder-upload-fill:before { content: "\ed81"; }
+.vicon-folder-upload-line:before { content: "\ed82"; }
+.vicon-folder-user-fill:before { content: "\ed83"; }
+.vicon-folder-user-line:before { content: "\ed84"; }
+.vicon-folder-warning-fill:before { content: "\ed85"; }
+.vicon-folder-warning-line:before { content: "\ed86"; }
+.vicon-folder-zip-fill:before { content: "\ed87"; }
+.vicon-folder-zip-line:before { content: "\ed88"; }
+.vicon-folders-fill:before { content: "\ed89"; }
+.vicon-folders-line:before { content: "\ed8a"; }
+.vicon-font-color:before { content: "\ed8b"; }
+.vicon-font-size-2:before { content: "\ed8c"; }
+.vicon-font-size:before { content: "\ed8d"; }
+.vicon-football-fill:before { content: "\ed8e"; }
+.vicon-football-line:before { content: "\ed8f"; }
+.vicon-footprint-fill:before { content: "\ed90"; }
+.vicon-footprint-line:before { content: "\ed91"; }
+.vicon-forbid-2-fill:before { content: "\ed92"; }
+.vicon-forbid-2-line:before { content: "\ed93"; }
+.vicon-forbid-fill:before { content: "\ed94"; }
+.vicon-forbid-line:before { content: "\ed95"; }
+.vicon-format-clear:before { content: "\ed96"; }
+.vicon-fridge-fill:before { content: "\ed97"; }
+.vicon-fridge-line:before { content: "\ed98"; }
+.vicon-fullscreen-exit-fill:before { content: "\ed99"; }
+.vicon-fullscreen-exit-line:before { content: "\ed9a"; }
+.vicon-fullscreen-fill:before { content: "\ed9b"; }
+.vicon-fullscreen-line:before { content: "\ed9c"; }
+.vicon-function-fill:before { content: "\ed9d"; }
+.vicon-function-line:before { content: "\ed9e"; }
+.vicon-functions:before { content: "\ed9f"; }
+.vicon-funds-box-fill:before { content: "\eda0"; }
+.vicon-funds-box-line:before { content: "\eda1"; }
+.vicon-funds-fill:before { content: "\eda2"; }
+.vicon-funds-line:before { content: "\eda3"; }
+.vicon-gallery-fill:before { content: "\eda4"; }
+.vicon-gallery-line:before { content: "\eda5"; }
+.vicon-gallery-upload-fill:before { content: "\eda6"; }
+.vicon-gallery-upload-line:before { content: "\eda7"; }
+.vicon-game-fill:before { content: "\eda8"; }
+.vicon-game-line:before { content: "\eda9"; }
+.vicon-gamepad-fill:before { content: "\edaa"; }
+.vicon-gamepad-line:before { content: "\edab"; }
+.vicon-gas-station-fill:before { content: "\edac"; }
+.vicon-gas-station-line:before { content: "\edad"; }
+.vicon-gatsby-fill:before { content: "\edae"; }
+.vicon-gatsby-line:before { content: "\edaf"; }
+.vicon-genderless-fill:before { content: "\edb0"; }
+.vicon-genderless-line:before { content: "\edb1"; }
+.vicon-ghost-2-fill:before { content: "\edb2"; }
+.vicon-ghost-2-line:before { content: "\edb3"; }
+.vicon-ghost-fill:before { content: "\edb4"; }
+.vicon-ghost-line:before { content: "\edb5"; }
+.vicon-ghost-smile-fill:before { content: "\edb6"; }
+.vicon-ghost-smile-line:before { content: "\edb7"; }
+.vicon-gift-2-fill:before { content: "\edb8"; }
+.vicon-gift-2-line:before { content: "\edb9"; }
+.vicon-gift-fill:before { content: "\edba"; }
+.vicon-gift-line:before { content: "\edbb"; }
+.vicon-git-branch-fill:before { content: "\edbc"; }
+.vicon-git-branch-line:before { content: "\edbd"; }
+.vicon-git-commit-fill:before { content: "\edbe"; }
+.vicon-git-commit-line:before { content: "\edbf"; }
+.vicon-git-merge-fill:before { content: "\edc0"; }
+.vicon-git-merge-line:before { content: "\edc1"; }
+.vicon-git-pull-request-fill:before { content: "\edc2"; }
+.vicon-git-pull-request-line:before { content: "\edc3"; }
+.vicon-git-repository-commits-fill:before { content: "\edc4"; }
+.vicon-git-repository-commits-line:before { content: "\edc5"; }
+.vicon-git-repository-fill:before { content: "\edc6"; }
+.vicon-git-repository-line:before { content: "\edc7"; }
+.vicon-git-repository-private-fill:before { content: "\edc8"; }
+.vicon-git-repository-private-line:before { content: "\edc9"; }
+.vicon-github-fill:before { content: "\edca"; }
+.vicon-github-line:before { content: "\edcb"; }
+.vicon-gitlab-fill:before { content: "\edcc"; }
+.vicon-gitlab-line:before { content: "\edcd"; }
+.vicon-global-fill:before { content: "\edce"; }
+.vicon-global-line:before { content: "\edcf"; }
+.vicon-globe-fill:before { content: "\edd0"; }
+.vicon-globe-line:before { content: "\edd1"; }
+.vicon-goblet-fill:before { content: "\edd2"; }
+.vicon-goblet-line:before { content: "\edd3"; }
+.vicon-google-fill:before { content: "\edd4"; }
+.vicon-google-line:before { content: "\edd5"; }
+.vicon-google-play-fill:before { content: "\edd6"; }
+.vicon-google-play-line:before { content: "\edd7"; }
+.vicon-government-fill:before { content: "\edd8"; }
+.vicon-government-line:before { content: "\edd9"; }
+.vicon-gps-fill:before { content: "\edda"; }
+.vicon-gps-line:before { content: "\eddb"; }
+.vicon-gradienter-fill:before { content: "\eddc"; }
+.vicon-gradienter-line:before { content: "\eddd"; }
+.vicon-grid-fill:before { content: "\edde"; }
+.vicon-grid-line:before { content: "\eddf"; }
+.vicon-group-2-fill:before { content: "\ede0"; }
+.vicon-group-2-line:before { content: "\ede1"; }
+.vicon-group-fill:before { content: "\ede2"; }
+.vicon-group-line:before { content: "\ede3"; }
+.vicon-guide-fill:before { content: "\ede4"; }
+.vicon-guide-line:before { content: "\ede5"; }
+.vicon-h-1:before { content: "\ede6"; }
+.vicon-h-2:before { content: "\ede7"; }
+.vicon-h-3:before { content: "\ede8"; }
+.vicon-h-4:before { content: "\ede9"; }
+.vicon-h-5:before { content: "\edea"; }
+.vicon-h-6:before { content: "\edeb"; }
+.vicon-hail-fill:before { content: "\edec"; }
+.vicon-hail-line:before { content: "\eded"; }
+.vicon-hammer-fill:before { content: "\edee"; }
+.vicon-hammer-line:before { content: "\edef"; }
+.vicon-hand-coin-fill:before { content: "\edf0"; }
+.vicon-hand-coin-line:before { content: "\edf1"; }
+.vicon-hand-heart-fill:before { content: "\edf2"; }
+.vicon-hand-heart-line:before { content: "\edf3"; }
+.vicon-hand-sanitizer-fill:before { content: "\edf4"; }
+.vicon-hand-sanitizer-line:before { content: "\edf5"; }
+.vicon-handbag-fill:before { content: "\edf6"; }
+.vicon-handbag-line:before { content: "\edf7"; }
+.vicon-hard-drive-2-fill:before { content: "\edf8"; }
+.vicon-hard-drive-2-line:before { content: "\edf9"; }
+.vicon-hard-drive-fill:before { content: "\edfa"; }
+.vicon-hard-drive-line:before { content: "\edfb"; }
+.vicon-hashtag:before { content: "\edfc"; }
+.vicon-haze-2-fill:before { content: "\edfd"; }
+.vicon-haze-2-line:before { content: "\edfe"; }
+.vicon-haze-fill:before { content: "\edff"; }
+.vicon-haze-line:before { content: "\ee00"; }
+.vicon-hd-fill:before { content: "\ee01"; }
+.vicon-hd-line:before { content: "\ee02"; }
+.vicon-heading:before { content: "\ee03"; }
+.vicon-headphone-fill:before { content: "\ee04"; }
+.vicon-headphone-line:before { content: "\ee05"; }
+.vicon-health-book-fill:before { content: "\ee06"; }
+.vicon-health-book-line:before { content: "\ee07"; }
+.vicon-heart-2-fill:before { content: "\ee08"; }
+.vicon-heart-2-line:before { content: "\ee09"; }
+.vicon-heart-3-fill:before { content: "\ee0a"; }
+.vicon-heart-3-line:before { content: "\ee0b"; }
+.vicon-heart-add-fill:before { content: "\ee0c"; }
+.vicon-heart-add-line:before { content: "\ee0d"; }
+.vicon-heart-fill:before { content: "\ee0e"; }
+.vicon-heart-line:before { content: "\ee0f"; }
+.vicon-heart-pulse-fill:before { content: "\ee10"; }
+.vicon-heart-pulse-line:before { content: "\ee11"; }
+.vicon-hearts-fill:before { content: "\ee12"; }
+.vicon-hearts-line:before { content: "\ee13"; }
+.vicon-heavy-showers-fill:before { content: "\ee14"; }
+.vicon-heavy-showers-line:before { content: "\ee15"; }
+.vicon-history-fill:before { content: "\ee16"; }
+.vicon-history-line:before { content: "\ee17"; }
+.vicon-home-2-fill:before { content: "\ee18"; }
+.vicon-home-2-line:before { content: "\ee19"; }
+.vicon-home-3-fill:before { content: "\ee1a"; }
+.vicon-home-3-line:before { content: "\ee1b"; }
+.vicon-home-4-fill:before { content: "\ee1c"; }
+.vicon-home-4-line:before { content: "\ee1d"; }
+.vicon-home-5-fill:before { content: "\ee1e"; }
+.vicon-home-5-line:before { content: "\ee1f"; }
+.vicon-home-6-fill:before { content: "\ee20"; }
+.vicon-home-6-line:before { content: "\ee21"; }
+.vicon-home-7-fill:before { content: "\ee22"; }
+.vicon-home-7-line:before { content: "\ee23"; }
+.vicon-home-8-fill:before { content: "\ee24"; }
+.vicon-home-8-line:before { content: "\ee25"; }
+.vicon-home-fill:before { content: "\ee26"; }
+.vicon-home-gear-fill:before { content: "\ee27"; }
+.vicon-home-gear-line:before { content: "\ee28"; }
+.vicon-home-heart-fill:before { content: "\ee29"; }
+.vicon-home-heart-line:before { content: "\ee2a"; }
+.vicon-home-line:before { content: "\ee2b"; }
+.vicon-home-smile-2-fill:before { content: "\ee2c"; }
+.vicon-home-smile-2-line:before { content: "\ee2d"; }
+.vicon-home-smile-fill:before { content: "\ee2e"; }
+.vicon-home-smile-line:before { content: "\ee2f"; }
+.vicon-home-wifi-fill:before { content: "\ee30"; }
+.vicon-home-wifi-line:before { content: "\ee31"; }
+.vicon-honor-of-kings-fill:before { content: "\ee32"; }
+.vicon-honor-of-kings-line:before { content: "\ee33"; }
+.vicon-honour-fill:before { content: "\ee34"; }
+.vicon-honour-line:before { content: "\ee35"; }
+.vicon-hospital-fill:before { content: "\ee36"; }
+.vicon-hospital-line:before { content: "\ee37"; }
+.vicon-hotel-bed-fill:before { content: "\ee38"; }
+.vicon-hotel-bed-line:before { content: "\ee39"; }
+.vicon-hotel-fill:before { content: "\ee3a"; }
+.vicon-hotel-line:before { content: "\ee3b"; }
+.vicon-hotspot-fill:before { content: "\ee3c"; }
+.vicon-hotspot-line:before { content: "\ee3d"; }
+.vicon-hq-fill:before { content: "\ee3e"; }
+.vicon-hq-line:before { content: "\ee3f"; }
+.vicon-html5-fill:before { content: "\ee40"; }
+.vicon-html5-line:before { content: "\ee41"; }
+.vicon-ie-fill:before { content: "\ee42"; }
+.vicon-ie-line:before { content: "\ee43"; }
+.vicon-image-2-fill:before { content: "\ee44"; }
+.vicon-image-2-line:before { content: "\ee45"; }
+.vicon-image-add-fill:before { content: "\ee46"; }
+.vicon-image-add-line:before { content: "\ee47"; }
+.vicon-image-edit-fill:before { content: "\ee48"; }
+.vicon-image-edit-line:before { content: "\ee49"; }
+.vicon-image-fill:before { content: "\ee4a"; }
+.vicon-image-line:before { content: "\ee4b"; }
+.vicon-inbox-archive-fill:before { content: "\ee4c"; }
+.vicon-inbox-archive-line:before { content: "\ee4d"; }
+.vicon-inbox-fill:before { content: "\ee4e"; }
+.vicon-inbox-line:before { content: "\ee4f"; }
+.vicon-inbox-unarchive-fill:before { content: "\ee50"; }
+.vicon-inbox-unarchive-line:before { content: "\ee51"; }
+.vicon-increase-decrease-fill:before { content: "\ee52"; }
+.vicon-increase-decrease-line:before { content: "\ee53"; }
+.vicon-indent-decrease:before { content: "\ee54"; }
+.vicon-indent-increase:before { content: "\ee55"; }
+.vicon-indeterminate-circle-fill:before { content: "\ee56"; }
+.vicon-indeterminate-circle-line:before { content: "\ee57"; }
+.vicon-information-fill:before { content: "\ee58"; }
+.vicon-information-line:before { content: "\ee59"; }
+.vicon-infrared-thermometer-fill:before { content: "\ee5a"; }
+.vicon-infrared-thermometer-line:before { content: "\ee5b"; }
+.vicon-ink-bottle-fill:before { content: "\ee5c"; }
+.vicon-ink-bottle-line:before { content: "\ee5d"; }
+.vicon-input-cursor-move:before { content: "\ee5e"; }
+.vicon-input-method-fill:before { content: "\ee5f"; }
+.vicon-input-method-line:before { content: "\ee60"; }
+.vicon-insert-column-left:before { content: "\ee61"; }
+.vicon-insert-column-right:before { content: "\ee62"; }
+.vicon-insert-row-bottom:before { content: "\ee63"; }
+.vicon-insert-row-top:before { content: "\ee64"; }
+.vicon-instagram-fill:before { content: "\ee65"; }
+.vicon-instagram-line:before { content: "\ee66"; }
+.vicon-install-fill:before { content: "\ee67"; }
+.vicon-install-line:before { content: "\ee68"; }
+.vicon-invision-fill:before { content: "\ee69"; }
+.vicon-invision-line:before { content: "\ee6a"; }
+.vicon-italic:before { content: "\ee6b"; }
+.vicon-kakao-talk-fill:before { content: "\ee6c"; }
+.vicon-kakao-talk-line:before { content: "\ee6d"; }
+.vicon-key-2-fill:before { content: "\ee6e"; }
+.vicon-key-2-line:before { content: "\ee6f"; }
+.vicon-key-fill:before { content: "\ee70"; }
+.vicon-key-line:before { content: "\ee71"; }
+.vicon-keyboard-box-fill:before { content: "\ee72"; }
+.vicon-keyboard-box-line:before { content: "\ee73"; }
+.vicon-keyboard-fill:before { content: "\ee74"; }
+.vicon-keyboard-line:before { content: "\ee75"; }
+.vicon-keynote-fill:before { content: "\ee76"; }
+.vicon-keynote-line:before { content: "\ee77"; }
+.vicon-knife-blood-fill:before { content: "\ee78"; }
+.vicon-knife-blood-line:before { content: "\ee79"; }
+.vicon-knife-fill:before { content: "\ee7a"; }
+.vicon-knife-line:before { content: "\ee7b"; }
+.vicon-landscape-fill:before { content: "\ee7c"; }
+.vicon-landscape-line:before { content: "\ee7d"; }
+.vicon-layout-2-fill:before { content: "\ee7e"; }
+.vicon-layout-2-line:before { content: "\ee7f"; }
+.vicon-layout-3-fill:before { content: "\ee80"; }
+.vicon-layout-3-line:before { content: "\ee81"; }
+.vicon-layout-4-fill:before { content: "\ee82"; }
+.vicon-layout-4-line:before { content: "\ee83"; }
+.vicon-layout-5-fill:before { content: "\ee84"; }
+.vicon-layout-5-line:before { content: "\ee85"; }
+.vicon-layout-6-fill:before { content: "\ee86"; }
+.vicon-layout-6-line:before { content: "\ee87"; }
+.vicon-layout-bottom-2-fill:before { content: "\ee88"; }
+.vicon-layout-bottom-2-line:before { content: "\ee89"; }
+.vicon-layout-bottom-fill:before { content: "\ee8a"; }
+.vicon-layout-bottom-line:before { content: "\ee8b"; }
+.vicon-layout-column-fill:before { content: "\ee8c"; }
+.vicon-layout-column-line:before { content: "\ee8d"; }
+.vicon-layout-fill:before { content: "\ee8e"; }
+.vicon-layout-grid-fill:before { content: "\ee8f"; }
+.vicon-layout-grid-line:before { content: "\ee90"; }
+.vicon-layout-left-2-fill:before { content: "\ee91"; }
+.vicon-layout-left-2-line:before { content: "\ee92"; }
+.vicon-layout-left-fill:before { content: "\ee93"; }
+.vicon-layout-left-line:before { content: "\ee94"; }
+.vicon-layout-line:before { content: "\ee95"; }
+.vicon-layout-masonry-fill:before { content: "\ee96"; }
+.vicon-layout-masonry-line:before { content: "\ee97"; }
+.vicon-layout-right-2-fill:before { content: "\ee98"; }
+.vicon-layout-right-2-line:before { content: "\ee99"; }
+.vicon-layout-right-fill:before { content: "\ee9a"; }
+.vicon-layout-right-line:before { content: "\ee9b"; }
+.vicon-layout-row-fill:before { content: "\ee9c"; }
+.vicon-layout-row-line:before { content: "\ee9d"; }
+.vicon-layout-top-2-fill:before { content: "\ee9e"; }
+.vicon-layout-top-2-line:before { content: "\ee9f"; }
+.vicon-layout-top-fill:before { content: "\eea0"; }
+.vicon-layout-top-line:before { content: "\eea1"; }
+.vicon-leaf-fill:before { content: "\eea2"; }
+.vicon-leaf-line:before { content: "\eea3"; }
+.vicon-lifebuoy-fill:before { content: "\eea4"; }
+.vicon-lifebuoy-line:before { content: "\eea5"; }
+.vicon-lightbulb-fill:before { content: "\eea6"; }
+.vicon-lightbulb-flash-fill:before { content: "\eea7"; }
+.vicon-lightbulb-flash-line:before { content: "\eea8"; }
+.vicon-lightbulb-line:before { content: "\eea9"; }
+.vicon-line-chart-fill:before { content: "\eeaa"; }
+.vicon-line-chart-line:before { content: "\eeab"; }
+.vicon-line-fill:before { content: "\eeac"; }
+.vicon-line-height:before { content: "\eead"; }
+.vicon-line-line:before { content: "\eeae"; }
+.vicon-link-m:before { content: "\eeaf"; }
+.vicon-link-unlink-m:before { content: "\eeb0"; }
+.vicon-link-unlink:before { content: "\eeb1"; }
+.vicon-link:before { content: "\eeb2"; }
+.vicon-linkedin-box-fill:before { content: "\eeb3"; }
+.vicon-linkedin-box-line:before { content: "\eeb4"; }
+.vicon-linkedin-fill:before { content: "\eeb5"; }
+.vicon-linkedin-line:before { content: "\eeb6"; }
+.vicon-links-fill:before { content: "\eeb7"; }
+.vicon-links-line:before { content: "\eeb8"; }
+.vicon-list-check-2:before { content: "\eeb9"; }
+.vicon-list-check:before { content: "\eeba"; }
+.vicon-list-ordered:before { content: "\eebb"; }
+.vicon-list-settings-fill:before { content: "\eebc"; }
+.vicon-list-settings-line:before { content: "\eebd"; }
+.vicon-list-unordered:before { content: "\eebe"; }
+.vicon-live-fill:before { content: "\eebf"; }
+.vicon-live-line:before { content: "\eec0"; }
+.vicon-loader-2-fill:before { content: "\eec1"; }
+.vicon-loader-2-line:before { content: "\eec2"; }
+.vicon-loader-3-fill:before { content: "\eec3"; }
+.vicon-loader-3-line:before { content: "\eec4"; }
+.vicon-loader-4-fill:before { content: "\eec5"; }
+.vicon-loader-4-line:before { content: "\eec6"; }
+.vicon-loader-5-fill:before { content: "\eec7"; }
+.vicon-loader-5-line:before { content: "\eec8"; }
+.vicon-loader-fill:before { content: "\eec9"; }
+.vicon-loader-line:before { content: "\eeca"; }
+.vicon-lock-2-fill:before { content: "\eecb"; }
+.vicon-lock-2-line:before { content: "\eecc"; }
+.vicon-lock-fill:before { content: "\eecd"; }
+.vicon-lock-line:before { content: "\eece"; }
+.vicon-lock-password-fill:before { content: "\eecf"; }
+.vicon-lock-password-line:before { content: "\eed0"; }
+.vicon-lock-unlock-fill:before { content: "\eed1"; }
+.vicon-lock-unlock-line:before { content: "\eed2"; }
+.vicon-login-box-fill:before { content: "\eed3"; }
+.vicon-login-box-line:before { content: "\eed4"; }
+.vicon-login-circle-fill:before { content: "\eed5"; }
+.vicon-login-circle-line:before { content: "\eed6"; }
+.vicon-logout-box-fill:before { content: "\eed7"; }
+.vicon-logout-box-line:before { content: "\eed8"; }
+.vicon-logout-box-r-fill:before { content: "\eed9"; }
+.vicon-logout-box-r-line:before { content: "\eeda"; }
+.vicon-logout-circle-fill:before { content: "\eedb"; }
+.vicon-logout-circle-line:before { content: "\eedc"; }
+.vicon-logout-circle-r-fill:before { content: "\eedd"; }
+.vicon-logout-circle-r-line:before { content: "\eede"; }
+.vicon-luggage-cart-fill:before { content: "\eedf"; }
+.vicon-luggage-cart-line:before { content: "\eee0"; }
+.vicon-luggage-deposit-fill:before { content: "\eee1"; }
+.vicon-luggage-deposit-line:before { content: "\eee2"; }
+.vicon-lungs-fill:before { content: "\eee3"; }
+.vicon-lungs-line:before { content: "\eee4"; }
+.vicon-mac-fill:before { content: "\eee5"; }
+.vicon-mac-line:before { content: "\eee6"; }
+.vicon-macbook-fill:before { content: "\eee7"; }
+.vicon-macbook-line:before { content: "\eee8"; }
+.vicon-magic-fill:before { content: "\eee9"; }
+.vicon-magic-line:before { content: "\eeea"; }
+.vicon-mail-add-fill:before { content: "\eeeb"; }
+.vicon-mail-add-line:before { content: "\eeec"; }
+.vicon-mail-check-fill:before { content: "\eeed"; }
+.vicon-mail-check-line:before { content: "\eeee"; }
+.vicon-mail-close-fill:before { content: "\eeef"; }
+.vicon-mail-close-line:before { content: "\eef0"; }
+.vicon-mail-download-fill:before { content: "\eef1"; }
+.vicon-mail-download-line:before { content: "\eef2"; }
+.vicon-mail-fill:before { content: "\eef3"; }
+.vicon-mail-forbid-fill:before { content: "\eef4"; }
+.vicon-mail-forbid-line:before { content: "\eef5"; }
+.vicon-mail-line:before { content: "\eef6"; }
+.vicon-mail-lock-fill:before { content: "\eef7"; }
+.vicon-mail-lock-line:before { content: "\eef8"; }
+.vicon-mail-open-fill:before { content: "\eef9"; }
+.vicon-mail-open-line:before { content: "\eefa"; }
+.vicon-mail-send-fill:before { content: "\eefb"; }
+.vicon-mail-send-line:before { content: "\eefc"; }
+.vicon-mail-settings-fill:before { content: "\eefd"; }
+.vicon-mail-settings-line:before { content: "\eefe"; }
+.vicon-mail-star-fill:before { content: "\eeff"; }
+.vicon-mail-star-line:before { content: "\ef00"; }
+.vicon-mail-unread-fill:before { content: "\ef01"; }
+.vicon-mail-unread-line:before { content: "\ef02"; }
+.vicon-mail-volume-fill:before { content: "\ef03"; }
+.vicon-mail-volume-line:before { content: "\ef04"; }
+.vicon-map-2-fill:before { content: "\ef05"; }
+.vicon-map-2-line:before { content: "\ef06"; }
+.vicon-map-fill:before { content: "\ef07"; }
+.vicon-map-line:before { content: "\ef08"; }
+.vicon-map-pin-2-fill:before { content: "\ef09"; }
+.vicon-map-pin-2-line:before { content: "\ef0a"; }
+.vicon-map-pin-3-fill:before { content: "\ef0b"; }
+.vicon-map-pin-3-line:before { content: "\ef0c"; }
+.vicon-map-pin-4-fill:before { content: "\ef0d"; }
+.vicon-map-pin-4-line:before { content: "\ef0e"; }
+.vicon-map-pin-5-fill:before { content: "\ef0f"; }
+.vicon-map-pin-5-line:before { content: "\ef10"; }
+.vicon-map-pin-add-fill:before { content: "\ef11"; }
+.vicon-map-pin-add-line:before { content: "\ef12"; }
+.vicon-map-pin-fill:before { content: "\ef13"; }
+.vicon-map-pin-line:before { content: "\ef14"; }
+.vicon-map-pin-range-fill:before { content: "\ef15"; }
+.vicon-map-pin-range-line:before { content: "\ef16"; }
+.vicon-map-pin-time-fill:before { content: "\ef17"; }
+.vicon-map-pin-time-line:before { content: "\ef18"; }
+.vicon-map-pin-user-fill:before { content: "\ef19"; }
+.vicon-map-pin-user-line:before { content: "\ef1a"; }
+.vicon-mark-pen-fill:before { content: "\ef1b"; }
+.vicon-mark-pen-line:before { content: "\ef1c"; }
+.vicon-markdown-fill:before { content: "\ef1d"; }
+.vicon-markdown-line:before { content: "\ef1e"; }
+.vicon-markup-fill:before { content: "\ef1f"; }
+.vicon-markup-line:before { content: "\ef20"; }
+.vicon-mastercard-fill:before { content: "\ef21"; }
+.vicon-mastercard-line:before { content: "\ef22"; }
+.vicon-mastodon-fill:before { content: "\ef23"; }
+.vicon-mastodon-line:before { content: "\ef24"; }
+.vicon-medal-2-fill:before { content: "\ef25"; }
+.vicon-medal-2-line:before { content: "\ef26"; }
+.vicon-medal-fill:before { content: "\ef27"; }
+.vicon-medal-line:before { content: "\ef28"; }
+.vicon-medicine-bottle-fill:before { content: "\ef29"; }
+.vicon-medicine-bottle-line:before { content: "\ef2a"; }
+.vicon-medium-fill:before { content: "\ef2b"; }
+.vicon-medium-line:before { content: "\ef2c"; }
+.vicon-men-fill:before { content: "\ef2d"; }
+.vicon-men-line:before { content: "\ef2e"; }
+.vicon-mental-health-fill:before { content: "\ef2f"; }
+.vicon-mental-health-line:before { content: "\ef30"; }
+.vicon-menu-2-fill:before { content: "\ef31"; }
+.vicon-menu-2-line:before { content: "\ef32"; }
+.vicon-menu-3-fill:before { content: "\ef33"; }
+.vicon-menu-3-line:before { content: "\ef34"; }
+.vicon-menu-4-fill:before { content: "\ef35"; }
+.vicon-menu-4-line:before { content: "\ef36"; }
+.vicon-menu-5-fill:before { content: "\ef37"; }
+.vicon-menu-5-line:before { content: "\ef38"; }
+.vicon-menu-add-fill:before { content: "\ef39"; }
+.vicon-menu-add-line:before { content: "\ef3a"; }
+.vicon-menu-fill:before { content: "\ef3b"; }
+.vicon-menu-fold-fill:before { content: "\ef3c"; }
+.vicon-menu-fold-line:before { content: "\ef3d"; }
+.vicon-menu-line:before { content: "\ef3e"; }
+.vicon-menu-unfold-fill:before { content: "\ef3f"; }
+.vicon-menu-unfold-line:before { content: "\ef40"; }
+.vicon-merge-cells-horizontal:before { content: "\ef41"; }
+.vicon-merge-cells-vertical:before { content: "\ef42"; }
+.vicon-message-2-fill:before { content: "\ef43"; }
+.vicon-message-2-line:before { content: "\ef44"; }
+.vicon-message-3-fill:before { content: "\ef45"; }
+.vicon-message-3-line:before { content: "\ef46"; }
+.vicon-message-fill:before { content: "\ef47"; }
+.vicon-message-line:before { content: "\ef48"; }
+.vicon-messenger-fill:before { content: "\ef49"; }
+.vicon-messenger-line:before { content: "\ef4a"; }
+.vicon-meteor-fill:before { content: "\ef4b"; }
+.vicon-meteor-line:before { content: "\ef4c"; }
+.vicon-mic-2-fill:before { content: "\ef4d"; }
+.vicon-mic-2-line:before { content: "\ef4e"; }
+.vicon-mic-fill:before { content: "\ef4f"; }
+.vicon-mic-line:before { content: "\ef50"; }
+.vicon-mic-off-fill:before { content: "\ef51"; }
+.vicon-mic-off-line:before { content: "\ef52"; }
+.vicon-mickey-fill:before { content: "\ef53"; }
+.vicon-mickey-line:before { content: "\ef54"; }
+.vicon-microscope-fill:before { content: "\ef55"; }
+.vicon-microscope-line:before { content: "\ef56"; }
+.vicon-microsoft-fill:before { content: "\ef57"; }
+.vicon-microsoft-line:before { content: "\ef58"; }
+.vicon-mind-map:before { content: "\ef59"; }
+.vicon-mini-program-fill:before { content: "\ef5a"; }
+.vicon-mini-program-line:before { content: "\ef5b"; }
+.vicon-mist-fill:before { content: "\ef5c"; }
+.vicon-mist-line:before { content: "\ef5d"; }
+.vicon-money-cny-box-fill:before { content: "\ef5e"; }
+.vicon-money-cny-box-line:before { content: "\ef5f"; }
+.vicon-money-cny-circle-fill:before { content: "\ef60"; }
+.vicon-money-cny-circle-line:before { content: "\ef61"; }
+.vicon-money-dollar-box-fill:before { content: "\ef62"; }
+.vicon-money-dollar-box-line:before { content: "\ef63"; }
+.vicon-money-dollar-circle-fill:before { content: "\ef64"; }
+.vicon-money-dollar-circle-line:before { content: "\ef65"; }
+.vicon-money-euro-box-fill:before { content: "\ef66"; }
+.vicon-money-euro-box-line:before { content: "\ef67"; }
+.vicon-money-euro-circle-fill:before { content: "\ef68"; }
+.vicon-money-euro-circle-line:before { content: "\ef69"; }
+.vicon-money-pound-box-fill:before { content: "\ef6a"; }
+.vicon-money-pound-box-line:before { content: "\ef6b"; }
+.vicon-money-pound-circle-fill:before { content: "\ef6c"; }
+.vicon-money-pound-circle-line:before { content: "\ef6d"; }
+.vicon-moon-clear-fill:before { content: "\ef6e"; }
+.vicon-moon-clear-line:before { content: "\ef6f"; }
+.vicon-moon-cloudy-fill:before { content: "\ef70"; }
+.vicon-moon-cloudy-line:before { content: "\ef71"; }
+.vicon-moon-fill:before { content: "\ef72"; }
+.vicon-moon-foggy-fill:before { content: "\ef73"; }
+.vicon-moon-foggy-line:before { content: "\ef74"; }
+.vicon-moon-line:before { content: "\ef75"; }
+.vicon-more-2-fill:before { content: "\ef76"; }
+.vicon-more-2-line:before { content: "\ef77"; }
+.vicon-more-fill:before { content: "\ef78"; }
+.vicon-more-line:before { content: "\ef79"; }
+.vicon-motorbike-fill:before { content: "\ef7a"; }
+.vicon-motorbike-line:before { content: "\ef7b"; }
+.vicon-mouse-fill:before { content: "\ef7c"; }
+.vicon-mouse-line:before { content: "\ef7d"; }
+.vicon-movie-2-fill:before { content: "\ef7e"; }
+.vicon-movie-2-line:before { content: "\ef7f"; }
+.vicon-movie-fill:before { content: "\ef80"; }
+.vicon-movie-line:before { content: "\ef81"; }
+.vicon-music-2-fill:before { content: "\ef82"; }
+.vicon-music-2-line:before { content: "\ef83"; }
+.vicon-music-fill:before { content: "\ef84"; }
+.vicon-music-line:before { content: "\ef85"; }
+.vicon-mv-fill:before { content: "\ef86"; }
+.vicon-mv-line:before { content: "\ef87"; }
+.vicon-navigation-fill:before { content: "\ef88"; }
+.vicon-navigation-line:before { content: "\ef89"; }
+.vicon-netease-cloud-music-fill:before { content: "\ef8a"; }
+.vicon-netease-cloud-music-line:before { content: "\ef8b"; }
+.vicon-netflix-fill:before { content: "\ef8c"; }
+.vicon-netflix-line:before { content: "\ef8d"; }
+.vicon-newspaper-fill:before { content: "\ef8e"; }
+.vicon-newspaper-line:before { content: "\ef8f"; }
+.vicon-node-tree:before { content: "\ef90"; }
+.vicon-notification-2-fill:before { content: "\ef91"; }
+.vicon-notification-2-line:before { content: "\ef92"; }
+.vicon-notification-3-fill:before { content: "\ef93"; }
+.vicon-notification-3-line:before { content: "\ef94"; }
+.vicon-notification-4-fill:before { content: "\ef95"; }
+.vicon-notification-4-line:before { content: "\ef96"; }
+.vicon-notification-badge-fill:before { content: "\ef97"; }
+.vicon-notification-badge-line:before { content: "\ef98"; }
+.vicon-notification-fill:before { content: "\ef99"; }
+.vicon-notification-line:before { content: "\ef9a"; }
+.vicon-notification-off-fill:before { content: "\ef9b"; }
+.vicon-notification-off-line:before { content: "\ef9c"; }
+.vicon-npmjs-fill:before { content: "\ef9d"; }
+.vicon-npmjs-line:before { content: "\ef9e"; }
+.vicon-number-0:before { content: "\ef9f"; }
+.vicon-number-1:before { content: "\efa0"; }
+.vicon-number-2:before { content: "\efa1"; }
+.vicon-number-3:before { content: "\efa2"; }
+.vicon-number-4:before { content: "\efa3"; }
+.vicon-number-5:before { content: "\efa4"; }
+.vicon-number-6:before { content: "\efa5"; }
+.vicon-number-7:before { content: "\efa6"; }
+.vicon-number-8:before { content: "\efa7"; }
+.vicon-number-9:before { content: "\efa8"; }
+.vicon-numbers-fill:before { content: "\efa9"; }
+.vicon-numbers-line:before { content: "\efaa"; }
+.vicon-nurse-fill:before { content: "\efab"; }
+.vicon-nurse-line:before { content: "\efac"; }
+.vicon-oil-fill:before { content: "\efad"; }
+.vicon-oil-line:before { content: "\efae"; }
+.vicon-omega:before { content: "\efaf"; }
+.vicon-open-arm-fill:before { content: "\efb0"; }
+.vicon-open-arm-line:before { content: "\efb1"; }
+.vicon-open-source-fill:before { content: "\efb2"; }
+.vicon-open-source-line:before { content: "\efb3"; }
+.vicon-opera-fill:before { content: "\efb4"; }
+.vicon-opera-line:before { content: "\efb5"; }
+.vicon-order-play-fill:before { content: "\efb6"; }
+.vicon-order-play-line:before { content: "\efb7"; }
+.vicon-organization-chart:before { content: "\efb8"; }
+.vicon-outlet-2-fill:before { content: "\efb9"; }
+.vicon-outlet-2-line:before { content: "\efba"; }
+.vicon-outlet-fill:before { content: "\efbb"; }
+.vicon-outlet-line:before { content: "\efbc"; }
+.vicon-page-separator:before { content: "\efbd"; }
+.vicon-pages-fill:before { content: "\efbe"; }
+.vicon-pages-line:before { content: "\efbf"; }
+.vicon-paint-brush-fill:before { content: "\efc0"; }
+.vicon-paint-brush-line:before { content: "\efc1"; }
+.vicon-paint-fill:before { content: "\efc2"; }
+.vicon-paint-line:before { content: "\efc3"; }
+.vicon-palette-fill:before { content: "\efc4"; }
+.vicon-palette-line:before { content: "\efc5"; }
+.vicon-pantone-fill:before { content: "\efc6"; }
+.vicon-pantone-line:before { content: "\efc7"; }
+.vicon-paragraph:before { content: "\efc8"; }
+.vicon-parent-fill:before { content: "\efc9"; }
+.vicon-parent-line:before { content: "\efca"; }
+.vicon-parentheses-fill:before { content: "\efcb"; }
+.vicon-parentheses-line:before { content: "\efcc"; }
+.vicon-parking-box-fill:before { content: "\efcd"; }
+.vicon-parking-box-line:before { content: "\efce"; }
+.vicon-parking-fill:before { content: "\efcf"; }
+.vicon-parking-line:before { content: "\efd0"; }
+.vicon-passport-fill:before { content: "\efd1"; }
+.vicon-passport-line:before { content: "\efd2"; }
+.vicon-patreon-fill:before { content: "\efd3"; }
+.vicon-patreon-line:before { content: "\efd4"; }
+.vicon-pause-circle-fill:before { content: "\efd5"; }
+.vicon-pause-circle-line:before { content: "\efd6"; }
+.vicon-pause-fill:before { content: "\efd7"; }
+.vicon-pause-line:before { content: "\efd8"; }
+.vicon-pause-mini-fill:before { content: "\efd9"; }
+.vicon-pause-mini-line:before { content: "\efda"; }
+.vicon-paypal-fill:before { content: "\efdb"; }
+.vicon-paypal-line:before { content: "\efdc"; }
+.vicon-pen-nib-fill:before { content: "\efdd"; }
+.vicon-pen-nib-line:before { content: "\efde"; }
+.vicon-pencil-fill:before { content: "\efdf"; }
+.vicon-pencil-line:before { content: "\efe0"; }
+.vicon-pencil-ruler-2-fill:before { content: "\efe1"; }
+.vicon-pencil-ruler-2-line:before { content: "\efe2"; }
+.vicon-pencil-ruler-fill:before { content: "\efe3"; }
+.vicon-pencil-ruler-line:before { content: "\efe4"; }
+.vicon-percent-fill:before { content: "\efe5"; }
+.vicon-percent-line:before { content: "\efe6"; }
+.vicon-phone-camera-fill:before { content: "\efe7"; }
+.vicon-phone-camera-line:before { content: "\efe8"; }
+.vicon-phone-fill:before { content: "\efe9"; }
+.vicon-phone-find-fill:before { content: "\efea"; }
+.vicon-phone-find-line:before { content: "\efeb"; }
+.vicon-phone-line:before { content: "\efec"; }
+.vicon-phone-lock-fill:before { content: "\efed"; }
+.vicon-phone-lock-line:before { content: "\efee"; }
+.vicon-picture-in-picture-2-fill:before { content: "\efef"; }
+.vicon-picture-in-picture-2-line:before { content: "\eff0"; }
+.vicon-picture-in-picture-exit-fill:before { content: "\eff1"; }
+.vicon-picture-in-picture-exit-line:before { content: "\eff2"; }
+.vicon-picture-in-picture-fill:before { content: "\eff3"; }
+.vicon-picture-in-picture-line:before { content: "\eff4"; }
+.vicon-pie-chart-2-fill:before { content: "\eff5"; }
+.vicon-pie-chart-2-line:before { content: "\eff6"; }
+.vicon-pie-chart-box-fill:before { content: "\eff7"; }
+.vicon-pie-chart-box-line:before { content: "\eff8"; }
+.vicon-pie-chart-fill:before { content: "\eff9"; }
+.vicon-pie-chart-line:before { content: "\effa"; }
+.vicon-pin-distance-fill:before { content: "\effb"; }
+.vicon-pin-distance-line:before { content: "\effc"; }
+.vicon-ping-pong-fill:before { content: "\effd"; }
+.vicon-ping-pong-line:before { content: "\effe"; }
+.vicon-pinterest-fill:before { content: "\efff"; }
+.vicon-pinterest-line:before { content: "\f000"; }
+.vicon-pinyin-input:before { content: "\f001"; }
+.vicon-pixelfed-fill:before { content: "\f002"; }
+.vicon-pixelfed-line:before { content: "\f003"; }
+.vicon-plane-fill:before { content: "\f004"; }
+.vicon-plane-line:before { content: "\f005"; }
+.vicon-plant-fill:before { content: "\f006"; }
+.vicon-plant-line:before { content: "\f007"; }
+.vicon-play-circle-fill:before { content: "\f008"; }
+.vicon-play-circle-line:before { content: "\f009"; }
+.vicon-play-fill:before { content: "\f00a"; }
+.vicon-play-line:before { content: "\f00b"; }
+.vicon-play-list-2-fill:before { content: "\f00c"; }
+.vicon-play-list-2-line:before { content: "\f00d"; }
+.vicon-play-list-add-fill:before { content: "\f00e"; }
+.vicon-play-list-add-line:before { content: "\f00f"; }
+.vicon-play-list-fill:before { content: "\f010"; }
+.vicon-play-list-line:before { content: "\f011"; }
+.vicon-play-mini-fill:before { content: "\f012"; }
+.vicon-play-mini-line:before { content: "\f013"; }
+.vicon-playstation-fill:before { content: "\f014"; }
+.vicon-playstation-line:before { content: "\f015"; }
+.vicon-plug-2-fill:before { content: "\f016"; }
+.vicon-plug-2-line:before { content: "\f017"; }
+.vicon-plug-fill:before { content: "\f018"; }
+.vicon-plug-line:before { content: "\f019"; }
+.vicon-polaroid-2-fill:before { content: "\f01a"; }
+.vicon-polaroid-2-line:before { content: "\f01b"; }
+.vicon-polaroid-fill:before { content: "\f01c"; }
+.vicon-polaroid-line:before { content: "\f01d"; }
+.vicon-police-car-fill:before { content: "\f01e"; }
+.vicon-police-car-line:before { content: "\f01f"; }
+.vicon-price-tag-2-fill:before { content: "\f020"; }
+.vicon-price-tag-2-line:before { content: "\f021"; }
+.vicon-price-tag-3-fill:before { content: "\f022"; }
+.vicon-price-tag-3-line:before { content: "\f023"; }
+.vicon-price-tag-fill:before { content: "\f024"; }
+.vicon-price-tag-line:before { content: "\f025"; }
+.vicon-printer-cloud-fill:before { content: "\f026"; }
+.vicon-printer-cloud-line:before { content: "\f027"; }
+.vicon-printer-fill:before { content: "\f028"; }
+.vicon-printer-line:before { content: "\f029"; }
+.vicon-product-hunt-fill:before { content: "\f02a"; }
+.vicon-product-hunt-line:before { content: "\f02b"; }
+.vicon-profile-fill:before { content: "\f02c"; }
+.vicon-profile-line:before { content: "\f02d"; }
+.vicon-projector-2-fill:before { content: "\f02e"; }
+.vicon-projector-2-line:before { content: "\f02f"; }
+.vicon-projector-fill:before { content: "\f030"; }
+.vicon-projector-line:before { content: "\f031"; }
+.vicon-psychotherapy-fill:before { content: "\f032"; }
+.vicon-psychotherapy-line:before { content: "\f033"; }
+.vicon-pulse-fill:before { content: "\f034"; }
+.vicon-pulse-line:before { content: "\f035"; }
+.vicon-pushpin-2-fill:before { content: "\f036"; }
+.vicon-pushpin-2-line:before { content: "\f037"; }
+.vicon-pushpin-fill:before { content: "\f038"; }
+.vicon-pushpin-line:before { content: "\f039"; }
+.vicon-qq-fill:before { content: "\f03a"; }
+.vicon-qq-line:before { content: "\f03b"; }
+.vicon-qr-code-fill:before { content: "\f03c"; }
+.vicon-qr-code-line:before { content: "\f03d"; }
+.vicon-qr-scan-2-fill:before { content: "\f03e"; }
+.vicon-qr-scan-2-line:before { content: "\f03f"; }
+.vicon-qr-scan-fill:before { content: "\f040"; }
+.vicon-qr-scan-line:before { content: "\f041"; }
+.vicon-question-answer-fill:before { content: "\f042"; }
+.vicon-question-answer-line:before { content: "\f043"; }
+.vicon-question-fill:before { content: "\f044"; }
+.vicon-question-line:before { content: "\f045"; }
+.vicon-question-mark:before { content: "\f046"; }
+.vicon-questionnaire-fill:before { content: "\f047"; }
+.vicon-questionnaire-line:before { content: "\f048"; }
+.vicon-quill-pen-fill:before { content: "\f049"; }
+.vicon-quill-pen-line:before { content: "\f04a"; }
+.vicon-radar-fill:before { content: "\f04b"; }
+.vicon-radar-line:before { content: "\f04c"; }
+.vicon-radio-2-fill:before { content: "\f04d"; }
+.vicon-radio-2-line:before { content: "\f04e"; }
+.vicon-radio-button-fill:before { content: "\f04f"; }
+.vicon-radio-button-line:before { content: "\f050"; }
+.vicon-radio-fill:before { content: "\f051"; }
+.vicon-radio-line:before { content: "\f052"; }
+.vicon-rainbow-fill:before { content: "\f053"; }
+.vicon-rainbow-line:before { content: "\f054"; }
+.vicon-rainy-fill:before { content: "\f055"; }
+.vicon-rainy-line:before { content: "\f056"; }
+.vicon-reactjs-fill:before { content: "\f057"; }
+.vicon-reactjs-line:before { content: "\f058"; }
+.vicon-record-circle-fill:before { content: "\f059"; }
+.vicon-record-circle-line:before { content: "\f05a"; }
+.vicon-record-mail-fill:before { content: "\f05b"; }
+.vicon-record-mail-line:before { content: "\f05c"; }
+.vicon-recycle-fill:before { content: "\f05d"; }
+.vicon-recycle-line:before { content: "\f05e"; }
+.vicon-red-packet-fill:before { content: "\f05f"; }
+.vicon-red-packet-line:before { content: "\f060"; }
+.vicon-reddit-fill:before { content: "\f061"; }
+.vicon-reddit-line:before { content: "\f062"; }
+.vicon-refresh-fill:before { content: "\f063"; }
+.vicon-refresh-line:before { content: "\f064"; }
+.vicon-refund-2-fill:before { content: "\f065"; }
+.vicon-refund-2-line:before { content: "\f066"; }
+.vicon-refund-fill:before { content: "\f067"; }
+.vicon-refund-line:before { content: "\f068"; }
+.vicon-registered-fill:before { content: "\f069"; }
+.vicon-registered-line:before { content: "\f06a"; }
+.vicon-remixicon-fill:before { content: "\f06b"; }
+.vicon-remixicon-line:before { content: "\f06c"; }
+.vicon-remote-control-2-fill:before { content: "\f06d"; }
+.vicon-remote-control-2-line:before { content: "\f06e"; }
+.vicon-remote-control-fill:before { content: "\f06f"; }
+.vicon-remote-control-line:before { content: "\f070"; }
+.vicon-repeat-2-fill:before { content: "\f071"; }
+.vicon-repeat-2-line:before { content: "\f072"; }
+.vicon-repeat-fill:before { content: "\f073"; }
+.vicon-repeat-line:before { content: "\f074"; }
+.vicon-repeat-one-fill:before { content: "\f075"; }
+.vicon-repeat-one-line:before { content: "\f076"; }
+.vicon-reply-all-fill:before { content: "\f077"; }
+.vicon-reply-all-line:before { content: "\f078"; }
+.vicon-reply-fill:before { content: "\f079"; }
+.vicon-reply-line:before { content: "\f07a"; }
+.vicon-reserved-fill:before { content: "\f07b"; }
+.vicon-reserved-line:before { content: "\f07c"; }
+.vicon-rest-time-fill:before { content: "\f07d"; }
+.vicon-rest-time-line:before { content: "\f07e"; }
+.vicon-restart-fill:before { content: "\f07f"; }
+.vicon-restart-line:before { content: "\f080"; }
+.vicon-restaurant-2-fill:before { content: "\f081"; }
+.vicon-restaurant-2-line:before { content: "\f082"; }
+.vicon-restaurant-fill:before { content: "\f083"; }
+.vicon-restaurant-line:before { content: "\f084"; }
+.vicon-rewind-fill:before { content: "\f085"; }
+.vicon-rewind-line:before { content: "\f086"; }
+.vicon-rewind-mini-fill:before { content: "\f087"; }
+.vicon-rewind-mini-line:before { content: "\f088"; }
+.vicon-rhythm-fill:before { content: "\f089"; }
+.vicon-rhythm-line:before { content: "\f08a"; }
+.vicon-riding-fill:before { content: "\f08b"; }
+.vicon-riding-line:before { content: "\f08c"; }
+.vicon-road-map-fill:before { content: "\f08d"; }
+.vicon-road-map-line:before { content: "\f08e"; }
+.vicon-roadster-fill:before { content: "\f08f"; }
+.vicon-roadster-line:before { content: "\f090"; }
+.vicon-robot-fill:before { content: "\f091"; }
+.vicon-robot-line:before { content: "\f092"; }
+.vicon-rocket-2-fill:before { content: "\f093"; }
+.vicon-rocket-2-line:before { content: "\f094"; }
+.vicon-rocket-fill:before { content: "\f095"; }
+.vicon-rocket-line:before { content: "\f096"; }
+.vicon-rotate-lock-fill:before { content: "\f097"; }
+.vicon-rotate-lock-line:before { content: "\f098"; }
+.vicon-rounded-corner:before { content: "\f099"; }
+.vicon-route-fill:before { content: "\f09a"; }
+.vicon-route-line:before { content: "\f09b"; }
+.vicon-router-fill:before { content: "\f09c"; }
+.vicon-router-line:before { content: "\f09d"; }
+.vicon-rss-fill:before { content: "\f09e"; }
+.vicon-rss-line:before { content: "\f09f"; }
+.vicon-ruler-2-fill:before { content: "\f0a0"; }
+.vicon-ruler-2-line:before { content: "\f0a1"; }
+.vicon-ruler-fill:before { content: "\f0a2"; }
+.vicon-ruler-line:before { content: "\f0a3"; }
+.vicon-run-fill:before { content: "\f0a4"; }
+.vicon-run-line:before { content: "\f0a5"; }
+.vicon-safavicon-fill:before { content: "\f0a6"; }
+.vicon-safavicon-line:before { content: "\f0a7"; }
+.vicon-safe-2-fill:before { content: "\f0a8"; }
+.vicon-safe-2-line:before { content: "\f0a9"; }
+.vicon-safe-fill:before { content: "\f0aa"; }
+.vicon-safe-line:before { content: "\f0ab"; }
+.vicon-sailboat-fill:before { content: "\f0ac"; }
+.vicon-sailboat-line:before { content: "\f0ad"; }
+.vicon-save-2-fill:before { content: "\f0ae"; }
+.vicon-save-2-line:before { content: "\f0af"; }
+.vicon-save-3-fill:before { content: "\f0b0"; }
+.vicon-save-3-line:before { content: "\f0b1"; }
+.vicon-save-fill:before { content: "\f0b2"; }
+.vicon-save-line:before { content: "\f0b3"; }
+.vicon-scales-2-fill:before { content: "\f0b4"; }
+.vicon-scales-2-line:before { content: "\f0b5"; }
+.vicon-scales-3-fill:before { content: "\f0b6"; }
+.vicon-scales-3-line:before { content: "\f0b7"; }
+.vicon-scales-fill:before { content: "\f0b8"; }
+.vicon-scales-line:before { content: "\f0b9"; }
+.vicon-scan-2-fill:before { content: "\f0ba"; }
+.vicon-scan-2-line:before { content: "\f0bb"; }
+.vicon-scan-fill:before { content: "\f0bc"; }
+.vicon-scan-line:before { content: "\f0bd"; }
+.vicon-scissors-2-fill:before { content: "\f0be"; }
+.vicon-scissors-2-line:before { content: "\f0bf"; }
+.vicon-scissors-cut-fill:before { content: "\f0c0"; }
+.vicon-scissors-cut-line:before { content: "\f0c1"; }
+.vicon-scissors-fill:before { content: "\f0c2"; }
+.vicon-scissors-line:before { content: "\f0c3"; }
+.vicon-screenshot-2-fill:before { content: "\f0c4"; }
+.vicon-screenshot-2-line:before { content: "\f0c5"; }
+.vicon-screenshot-fill:before { content: "\f0c6"; }
+.vicon-screenshot-line:before { content: "\f0c7"; }
+.vicon-sd-card-fill:before { content: "\f0c8"; }
+.vicon-sd-card-line:before { content: "\f0c9"; }
+.vicon-sd-card-mini-fill:before { content: "\f0ca"; }
+.vicon-sd-card-mini-line:before { content: "\f0cb"; }
+.vicon-search-2-fill:before { content: "\f0cc"; }
+.vicon-search-2-line:before { content: "\f0cd"; }
+.vicon-search-eye-fill:before { content: "\f0ce"; }
+.vicon-search-eye-line:before { content: "\f0cf"; }
+.vicon-search-fill:before { content: "\f0d0"; }
+.vicon-search-line:before { content: "\f0d1"; }
+.vicon-secure-payment-fill:before { content: "\f0d2"; }
+.vicon-secure-payment-line:before { content: "\f0d3"; }
+.vicon-seedling-fill:before { content: "\f0d4"; }
+.vicon-seedling-line:before { content: "\f0d5"; }
+.vicon-send-backward:before { content: "\f0d6"; }
+.vicon-send-plane-2-fill:before { content: "\f0d7"; }
+.vicon-send-plane-2-line:before { content: "\f0d8"; }
+.vicon-send-plane-fill:before { content: "\f0d9"; }
+.vicon-send-plane-line:before { content: "\f0da"; }
+.vicon-send-to-back:before { content: "\f0db"; }
+.vicon-sensor-fill:before { content: "\f0dc"; }
+.vicon-sensor-line:before { content: "\f0dd"; }
+.vicon-separator:before { content: "\f0de"; }
+.vicon-server-fill:before { content: "\f0df"; }
+.vicon-server-line:before { content: "\f0e0"; }
+.vicon-service-fill:before { content: "\f0e1"; }
+.vicon-service-line:before { content: "\f0e2"; }
+.vicon-settings-2-fill:before { content: "\f0e3"; }
+.vicon-settings-2-line:before { content: "\f0e4"; }
+.vicon-settings-3-fill:before { content: "\f0e5"; }
+.vicon-settings-3-line:before { content: "\f0e6"; }
+.vicon-settings-4-fill:before { content: "\f0e7"; }
+.vicon-settings-4-line:before { content: "\f0e8"; }
+.vicon-settings-5-fill:before { content: "\f0e9"; }
+.vicon-settings-5-line:before { content: "\f0ea"; }
+.vicon-settings-6-fill:before { content: "\f0eb"; }
+.vicon-settings-6-line:before { content: "\f0ec"; }
+.vicon-settings-fill:before { content: "\f0ed"; }
+.vicon-settings-line:before { content: "\f0ee"; }
+.vicon-shape-2-fill:before { content: "\f0ef"; }
+.vicon-shape-2-line:before { content: "\f0f0"; }
+.vicon-shape-fill:before { content: "\f0f1"; }
+.vicon-shape-line:before { content: "\f0f2"; }
+.vicon-share-box-fill:before { content: "\f0f3"; }
+.vicon-share-box-line:before { content: "\f0f4"; }
+.vicon-share-circle-fill:before { content: "\f0f5"; }
+.vicon-share-circle-line:before { content: "\f0f6"; }
+.vicon-share-fill:before { content: "\f0f7"; }
+.vicon-share-forward-2-fill:before { content: "\f0f8"; }
+.vicon-share-forward-2-line:before { content: "\f0f9"; }
+.vicon-share-forward-box-fill:before { content: "\f0fa"; }
+.vicon-share-forward-box-line:before { content: "\f0fb"; }
+.vicon-share-forward-fill:before { content: "\f0fc"; }
+.vicon-share-forward-line:before { content: "\f0fd"; }
+.vicon-share-line:before { content: "\f0fe"; }
+.vicon-shield-check-fill:before { content: "\f0ff"; }
+.vicon-shield-check-line:before { content: "\f100"; }
+.vicon-shield-cross-fill:before { content: "\f101"; }
+.vicon-shield-cross-line:before { content: "\f102"; }
+.vicon-shield-fill:before { content: "\f103"; }
+.vicon-shield-flash-fill:before { content: "\f104"; }
+.vicon-shield-flash-line:before { content: "\f105"; }
+.vicon-shield-keyhole-fill:before { content: "\f106"; }
+.vicon-shield-keyhole-line:before { content: "\f107"; }
+.vicon-shield-line:before { content: "\f108"; }
+.vicon-shield-star-fill:before { content: "\f109"; }
+.vicon-shield-star-line:before { content: "\f10a"; }
+.vicon-shield-user-fill:before { content: "\f10b"; }
+.vicon-shield-user-line:before { content: "\f10c"; }
+.vicon-ship-2-fill:before { content: "\f10d"; }
+.vicon-ship-2-line:before { content: "\f10e"; }
+.vicon-ship-fill:before { content: "\f10f"; }
+.vicon-ship-line:before { content: "\f110"; }
+.vicon-shirt-fill:before { content: "\f111"; }
+.vicon-shirt-line:before { content: "\f112"; }
+.vicon-shopping-bag-2-fill:before { content: "\f113"; }
+.vicon-shopping-bag-2-line:before { content: "\f114"; }
+.vicon-shopping-bag-3-fill:before { content: "\f115"; }
+.vicon-shopping-bag-3-line:before { content: "\f116"; }
+.vicon-shopping-bag-fill:before { content: "\f117"; }
+.vicon-shopping-bag-line:before { content: "\f118"; }
+.vicon-shopping-basket-2-fill:before { content: "\f119"; }
+.vicon-shopping-basket-2-line:before { content: "\f11a"; }
+.vicon-shopping-basket-fill:before { content: "\f11b"; }
+.vicon-shopping-basket-line:before { content: "\f11c"; }
+.vicon-shopping-cart-2-fill:before { content: "\f11d"; }
+.vicon-shopping-cart-2-line:before { content: "\f11e"; }
+.vicon-shopping-cart-fill:before { content: "\f11f"; }
+.vicon-shopping-cart-line:before { content: "\f120"; }
+.vicon-showers-fill:before { content: "\f121"; }
+.vicon-showers-line:before { content: "\f122"; }
+.vicon-shuffle-fill:before { content: "\f123"; }
+.vicon-shuffle-line:before { content: "\f124"; }
+.vicon-shut-down-fill:before { content: "\f125"; }
+.vicon-shut-down-line:before { content: "\f126"; }
+.vicon-side-bar-fill:before { content: "\f127"; }
+.vicon-side-bar-line:before { content: "\f128"; }
+.vicon-signal-tower-fill:before { content: "\f129"; }
+.vicon-signal-tower-line:before { content: "\f12a"; }
+.vicon-signal-wifi-1-fill:before { content: "\f12b"; }
+.vicon-signal-wifi-1-line:before { content: "\f12c"; }
+.vicon-signal-wifi-2-fill:before { content: "\f12d"; }
+.vicon-signal-wifi-2-line:before { content: "\f12e"; }
+.vicon-signal-wifi-3-fill:before { content: "\f12f"; }
+.vicon-signal-wifi-3-line:before { content: "\f130"; }
+.vicon-signal-wifi-error-fill:before { content: "\f131"; }
+.vicon-signal-wifi-error-line:before { content: "\f132"; }
+.vicon-signal-wifi-fill:before { content: "\f133"; }
+.vicon-signal-wifi-line:before { content: "\f134"; }
+.vicon-signal-wifi-off-fill:before { content: "\f135"; }
+.vicon-signal-wifi-off-line:before { content: "\f136"; }
+.vicon-sim-card-2-fill:before { content: "\f137"; }
+.vicon-sim-card-2-line:before { content: "\f138"; }
+.vicon-sim-card-fill:before { content: "\f139"; }
+.vicon-sim-card-line:before { content: "\f13a"; }
+.vicon-single-quotes-l:before { content: "\f13b"; }
+.vicon-single-quotes-r:before { content: "\f13c"; }
+.vicon-sip-fill:before { content: "\f13d"; }
+.vicon-sip-line:before { content: "\f13e"; }
+.vicon-skip-back-fill:before { content: "\f13f"; }
+.vicon-skip-back-line:before { content: "\f140"; }
+.vicon-skip-back-mini-fill:before { content: "\f141"; }
+.vicon-skip-back-mini-line:before { content: "\f142"; }
+.vicon-skip-forward-fill:before { content: "\f143"; }
+.vicon-skip-forward-line:before { content: "\f144"; }
+.vicon-skip-forward-mini-fill:before { content: "\f145"; }
+.vicon-skip-forward-mini-line:before { content: "\f146"; }
+.vicon-skull-2-fill:before { content: "\f147"; }
+.vicon-skull-2-line:before { content: "\f148"; }
+.vicon-skull-fill:before { content: "\f149"; }
+.vicon-skull-line:before { content: "\f14a"; }
+.vicon-skype-fill:before { content: "\f14b"; }
+.vicon-skype-line:before { content: "\f14c"; }
+.vicon-slack-fill:before { content: "\f14d"; }
+.vicon-slack-line:before { content: "\f14e"; }
+.vicon-slice-fill:before { content: "\f14f"; }
+.vicon-slice-line:before { content: "\f150"; }
+.vicon-slideshow-2-fill:before { content: "\f151"; }
+.vicon-slideshow-2-line:before { content: "\f152"; }
+.vicon-slideshow-3-fill:before { content: "\f153"; }
+.vicon-slideshow-3-line:before { content: "\f154"; }
+.vicon-slideshow-4-fill:before { content: "\f155"; }
+.vicon-slideshow-4-line:before { content: "\f156"; }
+.vicon-slideshow-fill:before { content: "\f157"; }
+.vicon-slideshow-line:before { content: "\f158"; }
+.vicon-smartphone-fill:before { content: "\f159"; }
+.vicon-smartphone-line:before { content: "\f15a"; }
+.vicon-snapchat-fill:before { content: "\f15b"; }
+.vicon-snapchat-line:before { content: "\f15c"; }
+.vicon-snowy-fill:before { content: "\f15d"; }
+.vicon-snowy-line:before { content: "\f15e"; }
+.vicon-sort-asc:before { content: "\f15f"; }
+.vicon-sort-desc:before { content: "\f160"; }
+.vicon-sound-module-fill:before { content: "\f161"; }
+.vicon-sound-module-line:before { content: "\f162"; }
+.vicon-soundcloud-fill:before { content: "\f163"; }
+.vicon-soundcloud-line:before { content: "\f164"; }
+.vicon-space-ship-fill:before { content: "\f165"; }
+.vicon-space-ship-line:before { content: "\f166"; }
+.vicon-space:before { content: "\f167"; }
+.vicon-spam-2-fill:before { content: "\f168"; }
+.vicon-spam-2-line:before { content: "\f169"; }
+.vicon-spam-3-fill:before { content: "\f16a"; }
+.vicon-spam-3-line:before { content: "\f16b"; }
+.vicon-spam-fill:before { content: "\f16c"; }
+.vicon-spam-line:before { content: "\f16d"; }
+.vicon-speaker-2-fill:before { content: "\f16e"; }
+.vicon-speaker-2-line:before { content: "\f16f"; }
+.vicon-speaker-3-fill:before { content: "\f170"; }
+.vicon-speaker-3-line:before { content: "\f171"; }
+.vicon-speaker-fill:before { content: "\f172"; }
+.vicon-speaker-line:before { content: "\f173"; }
+.vicon-spectrum-fill:before { content: "\f174"; }
+.vicon-spectrum-line:before { content: "\f175"; }
+.vicon-speed-fill:before { content: "\f176"; }
+.vicon-speed-line:before { content: "\f177"; }
+.vicon-speed-mini-fill:before { content: "\f178"; }
+.vicon-speed-mini-line:before { content: "\f179"; }
+.vicon-split-cells-horizontal:before { content: "\f17a"; }
+.vicon-split-cells-vertical:before { content: "\f17b"; }
+.vicon-spotify-fill:before { content: "\f17c"; }
+.vicon-spotify-line:before { content: "\f17d"; }
+.vicon-spy-fill:before { content: "\f17e"; }
+.vicon-spy-line:before { content: "\f17f"; }
+.vicon-stack-fill:before { content: "\f180"; }
+.vicon-stack-line:before { content: "\f181"; }
+.vicon-stack-overflow-fill:before { content: "\f182"; }
+.vicon-stack-overflow-line:before { content: "\f183"; }
+.vicon-stackshare-fill:before { content: "\f184"; }
+.vicon-stackshare-line:before { content: "\f185"; }
+.vicon-star-fill:before { content: "\f186"; }
+.vicon-star-half-fill:before { content: "\f187"; }
+.vicon-star-half-line:before { content: "\f188"; }
+.vicon-star-half-s-fill:before { content: "\f189"; }
+.vicon-star-half-s-line:before { content: "\f18a"; }
+.vicon-star-line:before { content: "\f18b"; }
+.vicon-star-s-fill:before { content: "\f18c"; }
+.vicon-star-s-line:before { content: "\f18d"; }
+.vicon-star-smile-fill:before { content: "\f18e"; }
+.vicon-star-smile-line:before { content: "\f18f"; }
+.vicon-steam-fill:before { content: "\f190"; }
+.vicon-steam-line:before { content: "\f191"; }
+.vicon-steering-2-fill:before { content: "\f192"; }
+.vicon-steering-2-line:before { content: "\f193"; }
+.vicon-steering-fill:before { content: "\f194"; }
+.vicon-steering-line:before { content: "\f195"; }
+.vicon-stethoscope-fill:before { content: "\f196"; }
+.vicon-stethoscope-line:before { content: "\f197"; }
+.vicon-sticky-note-2-fill:before { content: "\f198"; }
+.vicon-sticky-note-2-line:before { content: "\f199"; }
+.vicon-sticky-note-fill:before { content: "\f19a"; }
+.vicon-sticky-note-line:before { content: "\f19b"; }
+.vicon-stock-fill:before { content: "\f19c"; }
+.vicon-stock-line:before { content: "\f19d"; }
+.vicon-stop-circle-fill:before { content: "\f19e"; }
+.vicon-stop-circle-line:before { content: "\f19f"; }
+.vicon-stop-fill:before { content: "\f1a0"; }
+.vicon-stop-line:before { content: "\f1a1"; }
+.vicon-stop-mini-fill:before { content: "\f1a2"; }
+.vicon-stop-mini-line:before { content: "\f1a3"; }
+.vicon-store-2-fill:before { content: "\f1a4"; }
+.vicon-store-2-line:before { content: "\f1a5"; }
+.vicon-store-3-fill:before { content: "\f1a6"; }
+.vicon-store-3-line:before { content: "\f1a7"; }
+.vicon-store-fill:before { content: "\f1a8"; }
+.vicon-store-line:before { content: "\f1a9"; }
+.vicon-strikethrough-2:before { content: "\f1aa"; }
+.vicon-strikethrough:before { content: "\f1ab"; }
+.vicon-subscript-2:before { content: "\f1ac"; }
+.vicon-subscript:before { content: "\f1ad"; }
+.vicon-subtract-fill:before { content: "\f1ae"; }
+.vicon-subtract-line:before { content: "\f1af"; }
+.vicon-subway-fill:before { content: "\f1b0"; }
+.vicon-subway-line:before { content: "\f1b1"; }
+.vicon-subway-wifi-fill:before { content: "\f1b2"; }
+.vicon-subway-wifi-line:before { content: "\f1b3"; }
+.vicon-suitcase-2-fill:before { content: "\f1b4"; }
+.vicon-suitcase-2-line:before { content: "\f1b5"; }
+.vicon-suitcase-3-fill:before { content: "\f1b6"; }
+.vicon-suitcase-3-line:before { content: "\f1b7"; }
+.vicon-suitcase-fill:before { content: "\f1b8"; }
+.vicon-suitcase-line:before { content: "\f1b9"; }
+.vicon-sun-cloudy-fill:before { content: "\f1ba"; }
+.vicon-sun-cloudy-line:before { content: "\f1bb"; }
+.vicon-sun-fill:before { content: "\f1bc"; }
+.vicon-sun-foggy-fill:before { content: "\f1bd"; }
+.vicon-sun-foggy-line:before { content: "\f1be"; }
+.vicon-sun-line:before { content: "\f1bf"; }
+.vicon-superscript-2:before { content: "\f1c0"; }
+.vicon-superscript:before { content: "\f1c1"; }
+.vicon-surgical-mask-fill:before { content: "\f1c2"; }
+.vicon-surgical-mask-line:before { content: "\f1c3"; }
+.vicon-surround-sound-fill:before { content: "\f1c4"; }
+.vicon-surround-sound-line:before { content: "\f1c5"; }
+.vicon-survey-fill:before { content: "\f1c6"; }
+.vicon-survey-line:before { content: "\f1c7"; }
+.vicon-swap-box-fill:before { content: "\f1c8"; }
+.vicon-swap-box-line:before { content: "\f1c9"; }
+.vicon-swap-fill:before { content: "\f1ca"; }
+.vicon-swap-line:before { content: "\f1cb"; }
+.vicon-switch-fill:before { content: "\f1cc"; }
+.vicon-switch-line:before { content: "\f1cd"; }
+.vicon-sword-fill:before { content: "\f1ce"; }
+.vicon-sword-line:before { content: "\f1cf"; }
+.vicon-syringe-fill:before { content: "\f1d0"; }
+.vicon-syringe-line:before { content: "\f1d1"; }
+.vicon-t-box-fill:before { content: "\f1d2"; }
+.vicon-t-box-line:before { content: "\f1d3"; }
+.vicon-t-shirt-2-fill:before { content: "\f1d4"; }
+.vicon-t-shirt-2-line:before { content: "\f1d5"; }
+.vicon-t-shirt-air-fill:before { content: "\f1d6"; }
+.vicon-t-shirt-air-line:before { content: "\f1d7"; }
+.vicon-t-shirt-fill:before { content: "\f1d8"; }
+.vicon-t-shirt-line:before { content: "\f1d9"; }
+.vicon-table-2:before { content: "\f1da"; }
+.vicon-table-alt-fill:before { content: "\f1db"; }
+.vicon-table-alt-line:before { content: "\f1dc"; }
+.vicon-table-fill:before { content: "\f1dd"; }
+.vicon-table-line:before { content: "\f1de"; }
+.vicon-tablet-fill:before { content: "\f1df"; }
+.vicon-tablet-line:before { content: "\f1e0"; }
+.vicon-takeaway-fill:before { content: "\f1e1"; }
+.vicon-takeaway-line:before { content: "\f1e2"; }
+.vicon-taobao-fill:before { content: "\f1e3"; }
+.vicon-taobao-line:before { content: "\f1e4"; }
+.vicon-tape-fill:before { content: "\f1e5"; }
+.vicon-tape-line:before { content: "\f1e6"; }
+.vicon-task-fill:before { content: "\f1e7"; }
+.vicon-task-line:before { content: "\f1e8"; }
+.vicon-taxi-fill:before { content: "\f1e9"; }
+.vicon-taxi-line:before { content: "\f1ea"; }
+.vicon-taxi-wifi-fill:before { content: "\f1eb"; }
+.vicon-taxi-wifi-line:before { content: "\f1ec"; }
+.vicon-team-fill:before { content: "\f1ed"; }
+.vicon-team-line:before { content: "\f1ee"; }
+.vicon-telegram-fill:before { content: "\f1ef"; }
+.vicon-telegram-line:before { content: "\f1f0"; }
+.vicon-temp-cold-fill:before { content: "\f1f1"; }
+.vicon-temp-cold-line:before { content: "\f1f2"; }
+.vicon-temp-hot-fill:before { content: "\f1f3"; }
+.vicon-temp-hot-line:before { content: "\f1f4"; }
+.vicon-terminal-box-fill:before { content: "\f1f5"; }
+.vicon-terminal-box-line:before { content: "\f1f6"; }
+.vicon-terminal-fill:before { content: "\f1f7"; }
+.vicon-terminal-line:before { content: "\f1f8"; }
+.vicon-terminal-window-fill:before { content: "\f1f9"; }
+.vicon-terminal-window-line:before { content: "\f1fa"; }
+.vicon-test-tube-fill:before { content: "\f1fb"; }
+.vicon-test-tube-line:before { content: "\f1fc"; }
+.vicon-text-direction-l:before { content: "\f1fd"; }
+.vicon-text-direction-r:before { content: "\f1fe"; }
+.vicon-text-spacing:before { content: "\f1ff"; }
+.vicon-text-wrap:before { content: "\f200"; }
+.vicon-text:before { content: "\f201"; }
+.vicon-thermometer-fill:before { content: "\f202"; }
+.vicon-thermometer-line:before { content: "\f203"; }
+.vicon-thumb-down-fill:before { content: "\f204"; }
+.vicon-thumb-down-line:before { content: "\f205"; }
+.vicon-thumb-up-fill:before { content: "\f206"; }
+.vicon-thumb-up-line:before { content: "\f207"; }
+.vicon-thunderstorms-fill:before { content: "\f208"; }
+.vicon-thunderstorms-line:before { content: "\f209"; }
+.vicon-ticket-2-fill:before { content: "\f20a"; }
+.vicon-ticket-2-line:before { content: "\f20b"; }
+.vicon-ticket-fill:before { content: "\f20c"; }
+.vicon-ticket-line:before { content: "\f20d"; }
+.vicon-time-fill:before { content: "\f20e"; }
+.vicon-time-line:before { content: "\f20f"; }
+.vicon-timer-2-fill:before { content: "\f210"; }
+.vicon-timer-2-line:before { content: "\f211"; }
+.vicon-timer-fill:before { content: "\f212"; }
+.vicon-timer-flash-fill:before { content: "\f213"; }
+.vicon-timer-flash-line:before { content: "\f214"; }
+.vicon-timer-line:before { content: "\f215"; }
+.vicon-todo-fill:before { content: "\f216"; }
+.vicon-todo-line:before { content: "\f217"; }
+.vicon-toggle-fill:before { content: "\f218"; }
+.vicon-toggle-line:before { content: "\f219"; }
+.vicon-tools-fill:before { content: "\f21a"; }
+.vicon-tools-line:before { content: "\f21b"; }
+.vicon-tornado-fill:before { content: "\f21c"; }
+.vicon-tornado-line:before { content: "\f21d"; }
+.vicon-trademark-fill:before { content: "\f21e"; }
+.vicon-trademark-line:before { content: "\f21f"; }
+.vicon-traffic-light-fill:before { content: "\f220"; }
+.vicon-traffic-light-line:before { content: "\f221"; }
+.vicon-train-fill:before { content: "\f222"; }
+.vicon-train-line:before { content: "\f223"; }
+.vicon-train-wifi-fill:before { content: "\f224"; }
+.vicon-train-wifi-line:before { content: "\f225"; }
+.vicon-translate-2:before { content: "\f226"; }
+.vicon-translate:before { content: "\f227"; }
+.vicon-travesti-fill:before { content: "\f228"; }
+.vicon-travesti-line:before { content: "\f229"; }
+.vicon-treasure-map-fill:before { content: "\f22a"; }
+.vicon-treasure-map-line:before { content: "\f22b"; }
+.vicon-trello-fill:before { content: "\f22c"; }
+.vicon-trello-line:before { content: "\f22d"; }
+.vicon-trophy-fill:before { content: "\f22e"; }
+.vicon-trophy-line:before { content: "\f22f"; }
+.vicon-truck-fill:before { content: "\f230"; }
+.vicon-truck-line:before { content: "\f231"; }
+.vicon-tumblr-fill:before { content: "\f232"; }
+.vicon-tumblr-line:before { content: "\f233"; }
+.vicon-tv-2-fill:before { content: "\f234"; }
+.vicon-tv-2-line:before { content: "\f235"; }
+.vicon-tv-fill:before { content: "\f236"; }
+.vicon-tv-line:before { content: "\f237"; }
+.vicon-twitch-fill:before { content: "\f238"; }
+.vicon-twitch-line:before { content: "\f239"; }
+.vicon-twitter-fill:before { content: "\f23a"; }
+.vicon-twitter-line:before { content: "\f23b"; }
+.vicon-typhoon-fill:before { content: "\f23c"; }
+.vicon-typhoon-line:before { content: "\f23d"; }
+.vicon-u-disk-fill:before { content: "\f23e"; }
+.vicon-u-disk-line:before { content: "\f23f"; }
+.vicon-ubuntu-fill:before { content: "\f240"; }
+.vicon-ubuntu-line:before { content: "\f241"; }
+.vicon-umbrella-fill:before { content: "\f242"; }
+.vicon-umbrella-line:before { content: "\f243"; }
+.vicon-underline:before { content: "\f244"; }
+.vicon-uninstall-fill:before { content: "\f245"; }
+.vicon-uninstall-line:before { content: "\f246"; }
+.vicon-unsplash-fill:before { content: "\f247"; }
+.vicon-unsplash-line:before { content: "\f248"; }
+.vicon-upload-2-fill:before { content: "\f249"; }
+.vicon-upload-2-line:before { content: "\f24a"; }
+.vicon-upload-cloud-2-fill:before { content: "\f24b"; }
+.vicon-upload-cloud-2-line:before { content: "\f24c"; }
+.vicon-upload-cloud-fill:before { content: "\f24d"; }
+.vicon-upload-cloud-line:before { content: "\f24e"; }
+.vicon-upload-fill:before { content: "\f24f"; }
+.vicon-upload-line:before { content: "\f250"; }
+.vicon-usb-fill:before { content: "\f251"; }
+.vicon-usb-line:before { content: "\f252"; }
+.vicon-user-2-fill:before { content: "\f253"; }
+.vicon-user-2-line:before { content: "\f254"; }
+.vicon-user-3-fill:before { content: "\f255"; }
+.vicon-user-3-line:before { content: "\f256"; }
+.vicon-user-4-fill:before { content: "\f257"; }
+.vicon-user-4-line:before { content: "\f258"; }
+.vicon-user-5-fill:before { content: "\f259"; }
+.vicon-user-5-line:before { content: "\f25a"; }
+.vicon-user-6-fill:before { content: "\f25b"; }
+.vicon-user-6-line:before { content: "\f25c"; }
+.vicon-user-add-fill:before { content: "\f25d"; }
+.vicon-user-add-line:before { content: "\f25e"; }
+.vicon-user-fill:before { content: "\f25f"; }
+.vicon-user-follow-fill:before { content: "\f260"; }
+.vicon-user-follow-line:before { content: "\f261"; }
+.vicon-user-heart-fill:before { content: "\f262"; }
+.vicon-user-heart-line:before { content: "\f263"; }
+.vicon-user-line:before { content: "\f264"; }
+.vicon-user-location-fill:before { content: "\f265"; }
+.vicon-user-location-line:before { content: "\f266"; }
+.vicon-user-received-2-fill:before { content: "\f267"; }
+.vicon-user-received-2-line:before { content: "\f268"; }
+.vicon-user-received-fill:before { content: "\f269"; }
+.vicon-user-received-line:before { content: "\f26a"; }
+.vicon-user-search-fill:before { content: "\f26b"; }
+.vicon-user-search-line:before { content: "\f26c"; }
+.vicon-user-settings-fill:before { content: "\f26d"; }
+.vicon-user-settings-line:before { content: "\f26e"; }
+.vicon-user-shared-2-fill:before { content: "\f26f"; }
+.vicon-user-shared-2-line:before { content: "\f270"; }
+.vicon-user-shared-fill:before { content: "\f271"; }
+.vicon-user-shared-line:before { content: "\f272"; }
+.vicon-user-smile-fill:before { content: "\f273"; }
+.vicon-user-smile-line:before { content: "\f274"; }
+.vicon-user-star-fill:before { content: "\f275"; }
+.vicon-user-star-line:before { content: "\f276"; }
+.vicon-user-unfollow-fill:before { content: "\f277"; }
+.vicon-user-unfollow-line:before { content: "\f278"; }
+.vicon-user-voice-fill:before { content: "\f279"; }
+.vicon-user-voice-line:before { content: "\f27a"; }
+.vicon-video-add-fill:before { content: "\f27b"; }
+.vicon-video-add-line:before { content: "\f27c"; }
+.vicon-video-chat-fill:before { content: "\f27d"; }
+.vicon-video-chat-line:before { content: "\f27e"; }
+.vicon-video-download-fill:before { content: "\f27f"; }
+.vicon-video-download-line:before { content: "\f280"; }
+.vicon-video-fill:before { content: "\f281"; }
+.vicon-video-line:before { content: "\f282"; }
+.vicon-video-upload-fill:before { content: "\f283"; }
+.vicon-video-upload-line:before { content: "\f284"; }
+.vicon-vidicon-2-fill:before { content: "\f285"; }
+.vicon-vidicon-2-line:before { content: "\f286"; }
+.vicon-vidicon-fill:before { content: "\f287"; }
+.vicon-vidicon-line:before { content: "\f288"; }
+.vicon-vimeo-fill:before { content: "\f289"; }
+.vicon-vimeo-line:before { content: "\f28a"; }
+.vicon-vip-crown-2-fill:before { content: "\f28b"; }
+.vicon-vip-crown-2-line:before { content: "\f28c"; }
+.vicon-vip-crown-fill:before { content: "\f28d"; }
+.vicon-vip-crown-line:before { content: "\f28e"; }
+.vicon-vip-diamond-fill:before { content: "\f28f"; }
+.vicon-vip-diamond-line:before { content: "\f290"; }
+.vicon-vip-fill:before { content: "\f291"; }
+.vicon-vip-line:before { content: "\f292"; }
+.vicon-virus-fill:before { content: "\f293"; }
+.vicon-virus-line:before { content: "\f294"; }
+.vicon-visa-fill:before { content: "\f295"; }
+.vicon-visa-line:before { content: "\f296"; }
+.vicon-voice-recognition-fill:before { content: "\f297"; }
+.vicon-voice-recognition-line:before { content: "\f298"; }
+.vicon-voiceprint-fill:before { content: "\f299"; }
+.vicon-voiceprint-line:before { content: "\f29a"; }
+.vicon-volume-down-fill:before { content: "\f29b"; }
+.vicon-volume-down-line:before { content: "\f29c"; }
+.vicon-volume-mute-fill:before { content: "\f29d"; }
+.vicon-volume-mute-line:before { content: "\f29e"; }
+.vicon-volume-off-vibrate-fill:before { content: "\f29f"; }
+.vicon-volume-off-vibrate-line:before { content: "\f2a0"; }
+.vicon-volume-up-fill:before { content: "\f2a1"; }
+.vicon-volume-up-line:before { content: "\f2a2"; }
+.vicon-volume-vibrate-fill:before { content: "\f2a3"; }
+.vicon-volume-vibrate-line:before { content: "\f2a4"; }
+.vicon-vuejs-fill:before { content: "\f2a5"; }
+.vicon-vuejs-line:before { content: "\f2a6"; }
+.vicon-walk-fill:before { content: "\f2a7"; }
+.vicon-walk-line:before { content: "\f2a8"; }
+.vicon-wallet-2-fill:before { content: "\f2a9"; }
+.vicon-wallet-2-line:before { content: "\f2aa"; }
+.vicon-wallet-3-fill:before { content: "\f2ab"; }
+.vicon-wallet-3-line:before { content: "\f2ac"; }
+.vicon-wallet-fill:before { content: "\f2ad"; }
+.vicon-wallet-line:before { content: "\f2ae"; }
+.vicon-water-flash-fill:before { content: "\f2af"; }
+.vicon-water-flash-line:before { content: "\f2b0"; }
+.vicon-webcam-fill:before { content: "\f2b1"; }
+.vicon-webcam-line:before { content: "\f2b2"; }
+.vicon-wechat-2-fill:before { content: "\f2b3"; }
+.vicon-wechat-2-line:before { content: "\f2b4"; }
+.vicon-wechat-fill:before { content: "\f2b5"; }
+.vicon-wechat-line:before { content: "\f2b6"; }
+.vicon-wechat-pay-fill:before { content: "\f2b7"; }
+.vicon-wechat-pay-line:before { content: "\f2b8"; }
+.vicon-weibo-fill:before { content: "\f2b9"; }
+.vicon-weibo-line:before { content: "\f2ba"; }
+.vicon-whatsapp-fill:before { content: "\f2bb"; }
+.vicon-whatsapp-line:before { content: "\f2bc"; }
+.vicon-wheelchair-fill:before { content: "\f2bd"; }
+.vicon-wheelchair-line:before { content: "\f2be"; }
+.vicon-wifi-fill:before { content: "\f2bf"; }
+.vicon-wifi-line:before { content: "\f2c0"; }
+.vicon-wifi-off-fill:before { content: "\f2c1"; }
+.vicon-wifi-off-line:before { content: "\f2c2"; }
+.vicon-window-2-fill:before { content: "\f2c3"; }
+.vicon-window-2-line:before { content: "\f2c4"; }
+.vicon-window-fill:before { content: "\f2c5"; }
+.vicon-window-line:before { content: "\f2c6"; }
+.vicon-windows-fill:before { content: "\f2c7"; }
+.vicon-windows-line:before { content: "\f2c8"; }
+.vicon-windy-fill:before { content: "\f2c9"; }
+.vicon-windy-line:before { content: "\f2ca"; }
+.vicon-wireless-charging-fill:before { content: "\f2cb"; }
+.vicon-wireless-charging-line:before { content: "\f2cc"; }
+.vicon-women-fill:before { content: "\f2cd"; }
+.vicon-women-line:before { content: "\f2ce"; }
+.vicon-wubi-input:before { content: "\f2cf"; }
+.vicon-xbox-fill:before { content: "\f2d0"; }
+.vicon-xbox-line:before { content: "\f2d1"; }
+.vicon-xing-fill:before { content: "\f2d2"; }
+.vicon-xing-line:before { content: "\f2d3"; }
+.vicon-youtube-fill:before { content: "\f2d4"; }
+.vicon-youtube-line:before { content: "\f2d5"; }
+.vicon-zcool-fill:before { content: "\f2d6"; }
+.vicon-zcool-line:before { content: "\f2d7"; }
+.vicon-zhihu-fill:before { content: "\f2d8"; }
+.vicon-zhihu-line:before { content: "\f2d9"; }
+.vicon-zoom-in-fill:before { content: "\f2da"; }
+.vicon-zoom-in-line:before { content: "\f2db"; }
+.vicon-zoom-out-fill:before { content: "\f2dc"; }
+.vicon-zoom-out-line:before { content: "\f2dd"; }
+.vicon-zzz-fill:before { content: "\f2de"; }
+.vicon-zzz-line:before { content: "\f2df"; }
+.vicon-arrow-down-double-fill:before { content: "\f2e0"; }
+.vicon-arrow-down-double-line:before { content: "\f2e1"; }
+.vicon-arrow-left-double-fill:before { content: "\f2e2"; }
+.vicon-arrow-left-double-line:before { content: "\f2e3"; }
+.vicon-arrow-right-double-fill:before { content: "\f2e4"; }
+.vicon-arrow-right-double-line:before { content: "\f2e5"; }
+.vicon-arrow-turn-back-fill:before { content: "\f2e6"; }
+.vicon-arrow-turn-back-line:before { content: "\f2e7"; }
+.vicon-arrow-turn-forward-fill:before { content: "\f2e8"; }
+.vicon-arrow-turn-forward-line:before { content: "\f2e9"; }
+.vicon-arrow-up-double-fill:before { content: "\f2ea"; }
+.vicon-arrow-up-double-line:before { content: "\f2eb"; }
+.vicon-bard-fill:before { content: "\f2ec"; }
+.vicon-bard-line:before { content: "\f2ed"; }
+.vicon-bootstrap-fill:before { content: "\f2ee"; }
+.vicon-bootstrap-line:before { content: "\f2ef"; }
+.vicon-box-1-fill:before { content: "\f2f0"; }
+.vicon-box-1-line:before { content: "\f2f1"; }
+.vicon-box-2-fill:before { content: "\f2f2"; }
+.vicon-box-2-line:before { content: "\f2f3"; }
+.vicon-box-3-fill:before { content: "\f2f4"; }
+.vicon-box-3-line:before { content: "\f2f5"; }
+.vicon-brain-fill:before { content: "\f2f6"; }
+.vicon-brain-line:before { content: "\f2f7"; }
+.vicon-candle-fill:before { content: "\f2f8"; }
+.vicon-candle-line:before { content: "\f2f9"; }
+.vicon-cash-fill:before { content: "\f2fa"; }
+.vicon-cash-line:before { content: "\f2fb"; }
+.vicon-contract-left-fill:before { content: "\f2fc"; }
+.vicon-contract-left-line:before { content: "\f2fd"; }
+.vicon-contract-left-right-fill:before { content: "\f2fe"; }
+.vicon-contract-left-right-line:before { content: "\f2ff"; }
+.vicon-contract-right-fill:before { content: "\f300"; }
+.vicon-contract-right-line:before { content: "\f301"; }
+.vicon-contract-up-down-fill:before { content: "\f302"; }
+.vicon-contract-up-down-line:before { content: "\f303"; }
+.vicon-copilot-fill:before { content: "\f304"; }
+.vicon-copilot-line:before { content: "\f305"; }
+.vicon-corner-down-left-fill:before { content: "\f306"; }
+.vicon-corner-down-left-line:before { content: "\f307"; }
+.vicon-corner-down-right-fill:before { content: "\f308"; }
+.vicon-corner-down-right-line:before { content: "\f309"; }
+.vicon-corner-left-down-fill:before { content: "\f30a"; }
+.vicon-corner-left-down-line:before { content: "\f30b"; }
+.vicon-corner-left-up-fill:before { content: "\f30c"; }
+.vicon-corner-left-up-line:before { content: "\f30d"; }
+.vicon-corner-right-down-fill:before { content: "\f30e"; }
+.vicon-corner-right-down-line:before { content: "\f30f"; }
+.vicon-corner-right-up-fill:before { content: "\f310"; }
+.vicon-corner-right-up-line:before { content: "\f311"; }
+.vicon-corner-up-left-double-fill:before { content: "\f312"; }
+.vicon-corner-up-left-double-line:before { content: "\f313"; }
+.vicon-corner-up-left-fill:before { content: "\f314"; }
+.vicon-corner-up-left-line:before { content: "\f315"; }
+.vicon-corner-up-right-double-fill:before { content: "\f316"; }
+.vicon-corner-up-right-double-line:before { content: "\f317"; }
+.vicon-corner-up-right-fill:before { content: "\f318"; }
+.vicon-corner-up-right-line:before { content: "\f319"; }
+.vicon-cross-fill:before { content: "\f31a"; }
+.vicon-cross-line:before { content: "\f31b"; }
+.vicon-edge-new-fill:before { content: "\f31c"; }
+.vicon-edge-new-line:before { content: "\f31d"; }
+.vicon-equal-fill:before { content: "\f31e"; }
+.vicon-equal-line:before { content: "\f31f"; }
+.vicon-expand-left-fill:before { content: "\f320"; }
+.vicon-expand-left-line:before { content: "\f321"; }
+.vicon-expand-left-right-fill:before { content: "\f322"; }
+.vicon-expand-left-right-line:before { content: "\f323"; }
+.vicon-expand-right-fill:before { content: "\f324"; }
+.vicon-expand-right-line:before { content: "\f325"; }
+.vicon-expand-up-down-fill:before { content: "\f326"; }
+.vicon-expand-up-down-line:before { content: "\f327"; }
+.vicon-flickr-fill:before { content: "\f328"; }
+.vicon-flickr-line:before { content: "\f329"; }
+.vicon-forward-10-fill:before { content: "\f32a"; }
+.vicon-forward-10-line:before { content: "\f32b"; }
+.vicon-forward-15-fill:before { content: "\f32c"; }
+.vicon-forward-15-line:before { content: "\f32d"; }
+.vicon-forward-30-fill:before { content: "\f32e"; }
+.vicon-forward-30-line:before { content: "\f32f"; }
+.vicon-forward-5-fill:before { content: "\f330"; }
+.vicon-forward-5-line:before { content: "\f331"; }
+.vicon-graduation-cap-fill:before { content: "\f332"; }
+.vicon-graduation-cap-line:before { content: "\f333"; }
+.vicon-home-office-fill:before { content: "\f334"; }
+.vicon-home-office-line:before { content: "\f335"; }
+.vicon-hourglass-2-fill:before { content: "\f336"; }
+.vicon-hourglass-2-line:before { content: "\f337"; }
+.vicon-hourglass-fill:before { content: "\f338"; }
+.vicon-hourglass-line:before { content: "\f339"; }
+.vicon-javascript-fill:before { content: "\f33a"; }
+.vicon-javascript-line:before { content: "\f33b"; }
+.vicon-loop-left-fill:before { content: "\f33c"; }
+.vicon-loop-left-line:before { content: "\f33d"; }
+.vicon-loop-right-fill:before { content: "\f33e"; }
+.vicon-loop-right-line:before { content: "\f33f"; }
+.vicon-memories-fill:before { content: "\f340"; }
+.vicon-memories-line:before { content: "\f341"; }
+.vicon-meta-fill:before { content: "\f342"; }
+.vicon-meta-line:before { content: "\f343"; }
+.vicon-microsoft-loop-fill:before { content: "\f344"; }
+.vicon-microsoft-loop-line:before { content: "\f345"; }
+.vicon-nft-fill:before { content: "\f346"; }
+.vicon-nft-line:before { content: "\f347"; }
+.vicon-notion-fill:before { content: "\f348"; }
+.vicon-notion-line:before { content: "\f349"; }
+.vicon-openai-fill:before { content: "\f34a"; }
+.vicon-openai-line:before { content: "\f34b"; }
+.vicon-overline:before { content: "\f34c"; }
+.vicon-p2p-fill:before { content: "\f34d"; }
+.vicon-p2p-line:before { content: "\f34e"; }
+.vicon-presentation-fill:before { content: "\f34f"; }
+.vicon-presentation-line:before { content: "\f350"; }
+.vicon-replay-10-fill:before { content: "\f351"; }
+.vicon-replay-10-line:before { content: "\f352"; }
+.vicon-replay-15-fill:before { content: "\f353"; }
+.vicon-replay-15-line:before { content: "\f354"; }
+.vicon-replay-30-fill:before { content: "\f355"; }
+.vicon-replay-30-line:before { content: "\f356"; }
+.vicon-replay-5-fill:before { content: "\f357"; }
+.vicon-replay-5-line:before { content: "\f358"; }
+.vicon-school-fill:before { content: "\f359"; }
+.vicon-school-line:before { content: "\f35a"; }
+.vicon-shining-2-fill:before { content: "\f35b"; }
+.vicon-shining-2-line:before { content: "\f35c"; }
+.vicon-shining-fill:before { content: "\f35d"; }
+.vicon-shining-line:before { content: "\f35e"; }
+.vicon-sketching:before { content: "\f35f"; }
+.vicon-skip-down-fill:before { content: "\f360"; }
+.vicon-skip-down-line:before { content: "\f361"; }
+.vicon-skip-left-fill:before { content: "\f362"; }
+.vicon-skip-left-line:before { content: "\f363"; }
+.vicon-skip-right-fill:before { content: "\f364"; }
+.vicon-skip-right-line:before { content: "\f365"; }
+.vicon-skip-up-fill:before { content: "\f366"; }
+.vicon-skip-up-line:before { content: "\f367"; }
+.vicon-slow-down-fill:before { content: "\f368"; }
+.vicon-slow-down-line:before { content: "\f369"; }
+.vicon-sparkling-2-fill:before { content: "\f36a"; }
+.vicon-sparkling-2-line:before { content: "\f36b"; }
+.vicon-sparkling-fill:before { content: "\f36c"; }
+.vicon-sparkling-line:before { content: "\f36d"; }
+.vicon-speak-fill:before { content: "\f36e"; }
+.vicon-speak-line:before { content: "\f36f"; }
+.vicon-speed-up-fill:before { content: "\f370"; }
+.vicon-speed-up-line:before { content: "\f371"; }
+.vicon-tiktok-fill:before { content: "\f372"; }
+.vicon-tiktok-line:before { content: "\f373"; }
+.vicon-token-swap-fill:before { content: "\f374"; }
+.vicon-token-swap-line:before { content: "\f375"; }
+.vicon-unpin-fill:before { content: "\f376"; }
+.vicon-unpin-line:before { content: "\f377"; }
+.vicon-wechat-channels-fill:before { content: "\f378"; }
+.vicon-wechat-channels-line:before { content: "\f379"; }
+.vicon-wordpress-fill:before { content: "\f37a"; }
+.vicon-wordpress-line:before { content: "\f37b"; }
+
